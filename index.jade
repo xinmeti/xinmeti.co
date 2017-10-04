@@ -21,6 +21,7 @@ doctype html
 html(lang="en")
   include mixin.jade
   head(prefix="og: http://ogp.me/ns#")
+    include /ga.html
     meta(charset="utf-8")
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
@@ -111,4 +112,3 @@ html(lang="en")
   +css("index.css")
   +script("base.js")
   +script("index.js")
-  include /ga.html

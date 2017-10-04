@@ -1,0 +1,18 @@
+//- module
+- var decache = "?v="
+mixin nbr(count)
+  - for (var i = 0; i < count; i++)
+    br
+- if(!scriptLoader) { scriptLoader = {url: {}, config: {}}; }
+mixin script(url,config)
+  - scriptLoader.config = (config ? config : {});
+  if !scriptLoader.url[url]
+    - scriptLoader.url[url] = true;
+    if /^https?:\/\/./.exec(url)
+      script(type="text/javascript",src=url,
+      defer=!!scriptLoader.config.defer,async=!!scriptLoader.config.async)
+    else
+      script(type="text/javascript",src=url + decache,
+      defer=!!scriptLoader.config.defer,async=!!scriptLoader.config.async)
+mixin css(url)
+  link(rel="stylesheet",type="text/css",href=url + decache)

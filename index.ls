@@ -9,4 +9,4 @@ window.onload = ->
           delta = (time - now)
           if delta > 0 and delta < 1000 * 86400 * 7 => it.setAttribute \class, "current"
           else if delta < 0 =>it.setAttribute \class, "passed"
-          if delta >= 0 => it.querySelector('a').setAttribute \href, '#'
+          if delta >= 1000 * 86400 * 7 => it.querySelector('a').setAttribute \href, '#'

@@ -1,0 +1,35 @@
+extends /base.jade
+include /mixin.jade
+block vars
+  - config = {}
+block body
+  h1 資料集連結
+  .sep.huge-gap
+  h3 資料來源
+  ul
+    li: a(href="http://win.dgbas.gov.tw/dgbas04/bc5/EarningAndProductivity/QueryPages/More.aspx") 產業結構
+    li: a(href="http://data.gov.tw") 台灣開放資料入口網站
+    li: a(href="http://www.stat.gov.tw/mp.asp?mp=4") 中華民國統計資訊網
+    li: a(href="http://data.infographics.tw/viz/twstat/") 縣市重要統計指標 1998 ~ 2014
+    li: a(href="http://www.tfi.org.tw/about-publicinfo04.asp") 全國票房資訊 
+  +nbr(1)
+  h3 資料集連結
+  ul
+    li: a(href="data/us-crime-data.csv") #[i.fa.fa-table] 美國 20 年間犯罪率資料
+    li: a(href="data/us-crime-subset.csv") #[i.fa.fa-table] 美國 20 年間犯罪率資料 ( 部份資料 )
+    li: a(href="data/2016總統就職演說用詞分析.csv") #[i.fa.fa-table] 2016總統就職演說用詞分析
+    li: a(href="data/台大學生會.csv") #[i.fa.fa-table] 台大學生會政見用詞
+    li: a(href="data/朱立倫政治獻金資料近六百筆.csv") #[i.fa.fa-table] 朱立倫政治獻金資料近六百筆
+    li: a(href="data/漸凍人協會捐款芳名錄近六百筆.csv") #[i.fa.fa-table] 漸凍人協會捐款芳名錄近六百筆
+    li: a(href="data/各國來台旅遊人數-2016-2014.csv") #[i.fa.fa-table] 近三年各國來台旅遊人數
+    li: a(href="data/來台旅遊人數(原始檔).xls") #[i.fa.fa-file-excel-o] 2017/02各國來台旅遊人數原始檔
+    li: a(href="data/world-population.csv") #[i.fa.fa-table] 世界各國人口數
+    li: a(href="data/各國平均壽命.csv") #[i.fa.fa-table] 各國平均壽命
+    li: a(href="data/伊斯蘭相關恐攻事件.csv") #[i.fa.fa-table] 伊斯蘭相關恐攻事件
+    li: a(href="data/粗離婚率.csv") #[i.fa.fa-table] 粗離婚率
+    li: a(href="data/105年鄉鎮人口資料.csv") #[i.fa.fa-table] 105年各鄉鎮人口資料
+    li: a(href="data/工作坊事後問卷.csv") #[i.fa.fa-table] 工作坊事後問卷
+    li: a(href="data/olympic.csv") #[i.fa.fa-table] 世界各國奧林匹克得牌數統計
+    li: a(href="data/quake.csv") #[i.fa.fa-table] 2016年九月世界各地地震位置與強度
+    li: a(href="data/醫院列表.csv") #[i.fa.fa-table] 台灣醫院列表
+    li: a(href="data/宜蘭縣村里長資訊.xlsx") #[i.fa.fa-file-excel-o] 宜蘭縣村里長資訊

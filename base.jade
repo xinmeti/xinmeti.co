@@ -1,5 +1,7 @@
 //- module
 doctype html
+block vars
+- if(!config) config = {jumbotron: true}
 - var use = { cdn: false, og: true, favicon: true }
 - var lib = { jquery: true, angular: true, bootstrap: true, fontawesome: true }
 - var assets = "/assets"
@@ -30,17 +32,21 @@ html(lang="en")
     include /library.jade
     // custom files
   body
-    .jumbotron-fluid.text-center
-      .container-fluid
-        +nbr(2)
-        h1 新媒體內容技術與設計 
-        .subtitle New Media Techniques and Design
-        +nbr(1)
-        a.btn.btn-primary(href="/#course-list") 完整課表
-        +nbr(3)
+    include /nav.jade
+    if config.jumbotron
+      .jumbotron-fluid.text-center
+        .container-fluid
+          +nbr(2)
+          h1 新媒體內容技術與設計 
+          .subtitle New Media Techniques and Design
+          +nbr(1)
+          a.btn.btn-primary(href="/#course-list") 完整課表
+          +nbr(3)
     +nbr(2)
     .block1024
       block body
+    +nbr(2)
   include /footer.jade
   +css("/index.css")
   +script("/base.js")
+  include /ga.html

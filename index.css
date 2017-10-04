@@ -550,7 +550,8 @@ table.course-list tr.passed td {
 table.course-list tr.passed td:first-child {
   border-right-color: #eee;
 }
-table.course-list tr.passed td:nth-child(3) a {
+table.course-list tr.passed td:nth-child(3) a,
+table.course-list tr.current td:nth-child(3) a {
   color: #009cff;
   cursor: pointer;
   opacity: 1;
@@ -604,4 +605,10 @@ a.anchor {
 }
 #footer a {
   color: #fff;
+}
+nav.bg-black {
+  background-color: #000 !important;
+}
+nav.bg-black #navbarSupportedContent {
+  justify-content: flex-end;
 }

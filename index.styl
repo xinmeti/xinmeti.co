@@ -1,5 +1,6 @@
-@import vars
-@import basic
+@import 'vars.styl'
+@import 'basic.styl'
+@import 'lib.styl'
 
 html,body
   width: 100%
@@ -55,8 +56,11 @@ table.course-list
       line-height: 2.2em
 
 .jumbotron-fluid
-  background: #222
+  background: url(/assets/img/landing.jpg) #222
+  background-size: cover
   color: #eee
+  h1
+    text-shadow: 0 3px 6px rgba(0,0,0,0.5)
   a
     color: #44bbff
   .subtitle
@@ -75,4 +79,10 @@ a.anchor
   margin-top: -60px
   position: absolute
 
-@import 'lib.styl'
+#footer
+  background: #222
+  padding: 20px 20px
+  color: #fff
+  a
+    color: #fff
+

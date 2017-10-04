@@ -33,8 +33,10 @@ html(lang="en")
     .jumbotron-fluid.text-center
       .container-fluid
         +nbr(3)
-        h1 數位內容設計
-        .subtitle Digital Content Design
+        h1(style="padding-left:65px")
+          span 新媒體內容技術與設計 
+          img.ld.ld-breath(src="/assets/img/newspaper.svg",style="height:60px;margin-top:-10px")
+        .subtitle New Media Techniques and Design
         br
         div 上課時間：每周四 12:40 ~ 15:30
         div 上課地點：#[a(href="http://edu.cc.fju.edu.tw/m_room.html",target="_blank") 文開樓 402 電腦教室]
@@ -106,6 +108,7 @@ html(lang="en")
       +nbr(1)
       include /disqus.jade
     +nbr(3)
+  include /footer.jade
   +css("index.css")
   +script("base.js")
   +script("index.js")

@@ -21,3 +21,8 @@ block body
     li: a(href="https://www.sublimetext.com/") Sublime Text
     li: a(href="https://atom.io") Atom
     li: a(href="https://notepad-plus-plus.org/zh/") Notepad++
+  h4
+    span 參考源碼
+    small.grayed(style="font-size:0.7em") &nbsp;/ 請在 Chrome Dev Tool 的 Console Tab 中輸入
+  pre.code.
+    Array.from($("a")).map(function(d) { return d.href; });

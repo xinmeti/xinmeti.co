@@ -5,7 +5,7 @@ window.onload = ->
       Array.from(it.querySelectorAll('tr'))
         .map ->
           text = it.querySelector('td:nth-child(2)').innerText
-          time = new Date((if /^01/.exec(text) => "2018/" else "2017/") + text).getTime!
+          time = new Date((if /^01/.exec(text) => "2018/" else "2017/") + text).getTime! + 86400000
           delta = (time - now)
           if delta > 0 and delta < 1000 * 86400 * 7 => it.setAttribute \class, "current"
           else if delta < 0 =>it.setAttribute \class, "passed"

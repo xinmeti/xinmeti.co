@@ -29,3 +29,42 @@ block body
     small.grayed(style="font-size:0.7em") &nbsp;/ 請在 Chrome Dev Tool 的 Console Tab 中輸入
   pre.code.
     Array.from($("a")).map(function(d) { return d.href; });
+  +nbr(2)
+  h4 課堂練習
+  p 利用課堂上提到的 HTML 標籤 ( #[a(href="https://jsbin.com/xejuwecaqi/edit") 參考此網址] ) 重製一份簡易版的#[a(href="http://www.fju.edu.tw/newsDetail.jsp?newsID=5391&newsClassID=12") 輔大校園公告]
+  h5 參考答案
+  pre.code.
+    &lt;html&gt;
+      &lt;head&gt;&lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;近期本校屢有同學遭不法人士詐騙，請提高警覺，勿受詐騙。&lt;/h1&gt;
+        2017-10-02&bull; &lt;a href=&quot;?&quot;&gt;其他&lt;/a&gt;
+        &lt;hr&gt;
+        &lt;ul&gt;    
+          &lt;li&gt;發文單位：軍訓室&lt;/li&gt;
+          &lt;li&gt;業務承辦：曹育榕&lt;/li&gt;
+          &lt;li&gt;聯絡電話：02-29052885&lt;/li&gt;
+          &lt;li&gt;聯絡信箱：134235@mail.fju.edu.tw&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;    
+        近期本校屢有同學遭不法人士詐騙，分析狀況多為ATM解除分期付款之手法(與以下雷同)：
+        詐騙集團會假冒知名旅宿業或網拍客服等，以電話方式(電話號碼為竄改來電或開頭有+號)，佯稱因工作人員疏失將重複扣款、誤設為12筆訂單或分期設定或批發商，告知被害人帳戶將被連續扣繳金錢。詢問被害人是否需要協助取消或退費，如需取消設定或退費，需提供任一張提款卡背面之客服電話，將通知銀行客服協助後續處理。
+        隨後，被害人便接到該假冒該客服電話佯稱要協助取消相關扣款設定，要求被害人至鄰近ATM依照指示操作，以解除錯誤設定。首先稱需先查詢餘額(瞭解有多少錢)，再重新操作輸入一組訂單編號(實際為銀行帳號)及一組密碼(實際為匯出金額)或以提款卡將錢領出再以跨行存款存入，造成被害人依照指示操作後，無法第一時間查覺遭詐，之後才發現帳戶金額短少而驚覺遭詐騙。(手法資料來源：資安趨勢部落格https://blog.trendmicro.com.tw/?p=31115)
+
+        &lt;/p&gt;
+        &lt;p&gt;請各位師長、同學提高警覺，並瞭解ATM僅能提款、存款、轉帳(轉出)及更改密碼，沒有退稅功能，也無法取消扣款、分期設定，亦無法將款項轉入自己帳戶，中英文功能相同，勿聽他人指示以英文畫面操作，如有接獲相關電話可立即掛斷，如有疑問可隨時致電165反詐騙專線洽詢，以免受騙。
+    (附檔圖片資料來源：http://www.cyy.moj.gov.tw/ct.asp?xItem=403410&amp;ctNode=13535&amp;mp=037)
+        &lt;/p&gt;
+        &lt;p&gt;
+          附件檔案：
+      &lt;ol&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;/&quot;&gt;201508311353260.jpg&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  +nbr(2)
+  h5 參考結果
+  div(style="border-radius:5px;border:1px solid #ccc;padding:15px;margin:10px;box-shadow:0 2px 4px rgba(0,0,0,0.1)")
+    include /03/result.html

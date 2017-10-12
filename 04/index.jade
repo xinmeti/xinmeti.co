@@ -9,7 +9,231 @@ block body
   h3 連結
   +nbr(1)
   ul
-    li: a(href="https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web/HTML_basics") HTML 基礎 / MDN Web Docs
-    li: a(href="https://ascii.cl/htmlcodes.htm") HTML 控制碼速查表 / HTML Code Table
-    li: a(href="https://www.w3schools.com/TagS/ref_urlencode.asp") 網址編碼速查表 /  ASCII Encoding
-    li: a(href="https://meyerweb.com/eric/tools/dencoder/") 網址編碼轉換器 / URL Decoder / Encoder
+    li: a(href="https://jsfiddle.net/",target="_blank") JSFiddle / 網頁練習與編輯工具
+    li: a(href="https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web/HTML_basics",target="_blank") HTML 基礎 / MDN Web Docs
+    li: a(href="https://ascii.cl/htmlcodes.htm",target="_blank") HTML 控制碼速查表 / HTML Code Table
+    li: a(href="https://www.w3schools.com/TagS/ref_urlencode.asp",target="_blank") 網址編碼速查表 /  ASCII Encoding
+    li: a(href="https://meyerweb.com/eric/tools/dencoder/",target="_blank") 網址編碼轉換器 / URL Decoder / Encoder
+    li: a(href="https://en.wikipedia.org/wiki/Web_colors",target="_blank") 網頁顏色名稱與對應碼
+    li: a(href="https://loading.io/color/random/",target="_blank") Loading.io 色盤工具
+    li: a(href="https://loading.io/animation/",target="_blank") loading.css 動畫樣板套件
+    li: a(href="https://color.adobe.com/",target="_blank") Adobe Colors 色盤工具
+    li: a(href="http://caniuse.com/") Can I Use? 瀏覽器相容性速查工具
+    li: a(href="https://fonts.google.com/") Google Font 網頁字體服務
+    li: a(href="http://www.alanwood.net/demos/webdings.html") Webdings 字型速查表
+    li: a(href="http://fontawesome.io/") FontAwesome 字型圖示套件
+  +nbr(1)
+  h3 語法摘要
+  +nbr(1)
+  p HTML 由標籤組成，標籤則由一對角括號，標籤名與屬性值組成：
+  pre.code.
+    &lt;標籤名稱 屬性名稱="屬性值"&gt; 
+  p 除了單獨存在的標籤外，也有成對的標籤，方便我們標示網頁區塊的範圍。成對的結尾標籤在名稱前需加上斜線 "/" 用以跟開始標籤做區隔：
+  pre.code.
+    &lt;標籤名稱  屬性名稱="屬性值"&gt; ... ( 網頁內容 ) ... &lt;/標籤名稱屬性值"&gt; 
+  p 標籤名稱決定了該標籤的功能，通常為該功能的縮寫。例如，斷行 (break) 標籤：
+  pre.code.
+    &lt;br&gt;
+  p 以下簡述常用標籤與他們的用途：
+  style(type="text/css").
+    table { width: 100% }
+    table tr td:first-child { width: 80px; }
+    table tr td:nth-child(2) { width: 60px; }
+    table tr td:nth-child(3) { text-align: left; }
+    table tr td {
+      text-align: center;
+      background: #f9f9f9;
+      border-bottom: 4px solid #fff;
+      border-right: 4px solid #fff;
+      padding: 5px 10px;
+    }
+    table tr:nth-child(2n) td { background: #eee; }
+  table
+    tr
+      th(style="width:100px") 標籤名
+      th 類型
+      th 用途與範例
+
+    tr
+      td html
+      td 成對
+      td 網頁最外層必須要有的標籤。
+    tr
+      td head
+      td 成對
+      td 存放網頁的資訊、樣式等的地方。
+
+    tr
+      td body
+      td 成對
+      td 網頁的內容。
+
+    tr
+      td a
+      td 成對
+      td 超連結。屬性 "href" 指定連結的網址 #[br] 範例： &lt;a href="http://www.hinet.net"&gt; &lt;/a&gt;
+
+    tr
+      td br
+      td 單獨
+      td 斷行。#[br] 範例： &lt;br&gt;
+
+    tr
+      td h1
+      td 成對
+      td 標題(最大)。#[br] 範例： &lt;h1&gt; Headline &lt;h1&gt;
+
+    tr
+      td h2
+      td 成對
+      td 標題(次大)。#[br] 範例： &lt;h2&gt; Headline &lt;h1&gt;
+    tr
+      td h3
+      td 成對
+      td 標題(第三)。#[br] 範例： &lt;h3&gt; Headline &lt;h1&gt;
+    tr
+      td h4
+      td 成對
+      td 標題(第四)。#[br] 範例： &lt;h4&gt; Headline &lt;h1&gt;
+    tr
+      td h5
+      td 成對
+      td 標題(第五)。#[br] 範例： &lt;h5&gt; Headline &lt;h1&gt;
+    tr
+      td h6
+      td 成對
+      td 標題(第六)。#[br] 範例： &lt;h6&gt; Headline &lt;h1&gt;
+
+    tr
+      td ol
+      td 成對
+      td 有序列表。裡面需使用 &lt;li&gt; 列表項目標籤 #[br] 範例： &lt;ol&gt; &lt;li&gt; ... &lt;/li&gt;  &lt;ol&gt;
+    tr
+      td ul
+      td 成對
+      td 無序列表。裡面需使用 &lt;li&gt; 列表項目標籤 #[br] 範例： &lt;ul&gt; &lt;li&gt; ... &lt;/li&gt;  &lt;ul&gt;
+
+    tr
+      td hr
+      td 單獨
+      td 分格線。#[br] 範例： &lt;hr&gt;
+
+    tr
+      td p
+      td 成對
+      td 一個文字段落，前後會自動斷行。#[br] 範例： &lt;p&gt; Hello &lt;/p&gt;
+
+    tr
+      td span
+      td 成對
+      td 一段文字。#[br] 範例： &lt;span&gt; Hello &lt;/span&gt;
+
+    tr
+      td div
+      td 成對
+      td 區塊標籤，前後會自動斷行。#[br] 範例： &lt;div&gt; Hello &lt;/div&gt;
+
+    tr
+      td i
+      td 成對
+      td 一段文字，預設套用斜體樣式
+
+    tr
+      td b
+      td 成對
+      td 一段文字，預設套用粗體樣式
+
+    tr
+      td u
+      td 成對
+      td 一段文字，預設加入底線
+
+    tr
+      td del
+      td 成對
+      td 一段文字，預設加入刪除線
+
+    tr
+      td big
+      td 成對
+      td 一段文字，預設大一號字體
+
+    tr
+      td small
+      td 成對
+      td 一段文字，預設小一號字體
+
+    tr
+      td img
+      td 單獨
+      td 圖片標籤。使用 "img" 屬性指定圖片網址。#[br] 範例： &lt;img src="https://pbs.twimg.com/profile_images/839721704163155970/LI_TRk1z.jpg"&gt;
+
+    tr
+      td table
+      td 成對
+      td 
+        span 製作表格用。以 &lt;table&gt;, &lt;tr&gt;, &lt;td&gt; 三組標籤組成
+        br
+        span 範例：
+        pre.code.
+          &lt;table&gt;
+            &lt;tr&gt;
+              &lt;td&gt; ...  &lt;/td&gt;
+              &lt;td&gt; ...  &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt; ...  &lt;/td&gt;
+              &lt;td&gt; ...  &lt;/td&gt;
+            &lt;/tr&gt;
+          &;lt;/table&gt;
+
+    tr
+      td pre
+      td 成對
+      td 一段文字，但保留其中的空白與換行。#[br] 範例： &lt;pre&gt; Hello &lt;/pre&gt;
+
+    tr
+      td script
+      td 成對
+      td
+        p 載入程式碼。使用 "script" 屬性指定源碼網址，或直接在標籤內輸入程式碼。 範例：
+        pre.code.
+          &lt;script src="http://path-to-your-js-file"&gt;&lt;/pre&gt;
+        pre.code.
+          &lt;script&gt; alert("hello world!"); &lt;/pre&gt;
+
+    tr
+      td link
+      td 單獨
+      td
+        p 引用外部資源。一種常見的用途是載入 CSS 檔案：
+        pre.code.
+          &lt;link rel="stylesheet" type="text/css" href="http://path-to-your-css"&gt;
+
+    tr
+      td style
+      td 成對
+      td
+        p 載入樣式碼。直接在標籤內輸入樣式表。範例：
+        pre.code.
+          &lt;style type="text/css"&gt; p { color: red; } &lt;/style&gt;
+
+    tr
+      td title
+      td 成對
+      td 位於 head 標籤中，用於指定網頁標題。#[br] 範例： &lt;title&gt; 課程介紹 &lt;/title&gt;
+
+    tr
+      td meta
+      td 單獨
+      td 位於 head 標籤中，用於記錄各種資訊，例如編碼或摘要文字。 #[br] 範例： &lt;meta charset="utf-8"&gt;
+  +nbr(2)
+  h4 跳脫字元
+  p 由於 HTML 使用角括號 &gt; 與 &lt; 做控制字元，若要在一般文章中顯示角括號，需要使用特殊語法。我們利用 and 符號 "&amp;" 做開頭，接上各種名稱與分號來表示特殊符號，例如：
+  ul
+    li &amp;lt; - 角括號 / 小於 ( &lt; )
+    li &amp;gt; - 角括號 / 大於 ( &gt; )
+    li &amp;amp; - and 符號本身 ( &amp; )
+    li &amp;nbsp; - 空白 ( &nbsp; )
+    li &amp;copy; - 著作權符號 ( &copy; )
+  p 除了文字外，也可用電腦內碼來輸入，例如 &amp;#62; 即代表「&#62;」符號。

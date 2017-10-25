@@ -1,0 +1,289 @@
+extends /base.jade
+include /mixin.jade
+block body
+  .grayed 2017-10-19
+  big 數位專輯的骨架
+  h1 網頁繪圖與動畫入門 / SVG + Web Animation
+  .sep
+  +nbr(1)
+  h3 連結
+  +nbr(1)
+  ul
+    li: a(href="https://jsbin.com") JSBIN 網頁實驗與源碼分享服務
+    li: a(href="https://jsfiddle.net/",target="_blank") JSFiddle / 網頁練習與編輯工具
+    li: a(href="http://blog.infographics.tw/2015/06/introduction-to-svg-graphics-on-web/") 可縮放向量圖 SVG 入門 / 資料視覺化
+    li: a(href="http://www.oxxostudio.tw/articles/201410/svg-tutorial.html") SVG 完整教程 / OXXO Studio
+    li: a(href="https://loading.io/animation/",target="_blank") loading.css 動畫樣板套件說明文件
+    li: a(href="https://loading.io/transition/",target="_blank") transition.css 過場動畫樣板套件說明文件
+    li: a(href="https://loading.io/flexbox/",target="_blank") Flexbox Generator
+    li: a(href="http://caniuse.com/") Can I Use? 瀏覽器相容性速查工具
+    li: a(href="http://fontawesome.io/") FontAwesome 字型圖示套件
+  +nbr(2)
+  h2 內容摘要
+  .sep.huge-gap
+  +nbr(1)
+  h3 CSS 顯示模式
+  p 顯示模式為所有區塊都有的屬性，用來控制區塊在網頁中排版的方式。使用「display: <模式>」的方式來設定，常見的值有以下幾種：
+  ul
+    li #[code inline] ( 如文字一般排版 )
+    li #[code none] ( 不顯示 )
+    li #[code block] ( 如段落一般排版 )
+    li #[code inline-block] ( 如文字一般，但可以設定長寬 )
+    li #[code flex] ( 自動調整長寬 )
+  p 其它還有 #[code table], #[code table-cell], #[code table-row], #[code list-item] 等，更詳細的列表可以參考#[a(href="https://developer.mozilla.org/en-US/docs/Web/CSS/display") 這個連結]，不過我相信你不會太想把他看完...
+  p 為了進一步了解顯示模式，我們使用下面區塊練習：
+  b inline div
+  pre.code.
+    &lt;div style="background:yellow;display:inline;width:120px;height:64px"&gt;inline&lt;/div&gt;
+  b inline-block div
+  pre.code.
+    &lt;div style="background:yellow;display:inline-block;width:120px;height:64px"&gt;inline-block&lt;/div&gt;
+  b block div
+  pre.code.
+    &lt;div style="background:yellow;display:block;width:120px;height:64px"&gt;block&lt;/div&gt;
+  p 將上列三個區塊分別放到下面文章中，效果如下：
+  .card
+    .card-body
+      span 到底給我冰塊做甚麼，多點的蔬菜；很期待桃園能跟台中一樣常有人揪鍋底團。#[div(style="background:yellow;display:inline;width:120px;height:64px") inline]並不是有200元就可以甘願被水和麻辣湯潑，知後她驚呼，所以轉讓給想要去朋友，還可以直接外帶鍋底有夠貼心，吃麻辣鍋我們必點老油條，一入口就立即感受到滿滿鮮蝦的甜味。讓我們超失望!!，#[div(style="background:yellow;display:inline-block;width:120px;height:64px") inline-block]我真的沒看過有燒肉店的牛肉肥成這樣的拉（暈）不知道是這天鍋底加得勤，不好意思 因為我不太能吃辣加上腸胃又不好 但是又愛吃得要死，不知道是哪個國家或莊園的豆子；千層凍豆腐切成長方狀。每一桌也都有提供熱茶飲用；較多共11片，珍珠奶茶的濫觴。謝謝h大的建議，#[div(style="background:yellow;display:block;width:120px;height:64px") block]私心希望能有涼涼飲料一瓶~，也不會讓整個酸梅汁喝起來太過頭了一些，所以點了一壺，沒有甚麼驚豔感，一起穿上去年逛街買的姐妹服，果然是這樣跟同價位（屋馬，乾杯）比較起來真的是差了些，用餐有限制90分鐘；第二次坐一半的狀況來說。
+  +nbr(1)
+  h4 垂直對齊
+  p 由於 inline-block 高度可變，垂直對齊變成一個很重要的問題。下圖使用四個高度不同的 inline-block 製作出 bar chart:
+  style(type="text/css").
+    .exib, .exib2 { display: inline-block; width: 50px; background: orange; margin: 5px }
+    .exib2 { width: 25px;margin:3px;height:50px }
+    .vatop { vertical-align: top }
+    .vabottom { vertical-align: bottom }
+    .vamiddle { vertical-align: middle }
+    .vacustom { vertical-align: -50px }
+  .card: .card-body.text-center
+    .exib(style="height: 25px")
+    .exib(style="height: 50px")
+    .exib(style="height: 75px")
+    .exib(style="height: 100px")
+    .exib(style="height: 125px")
+    .exib(style="height: 150px")
+    .exib(style="height: 175px")
+    .exib(style="height: 200px")
+  +nbr(1)
+  p 使用 vertical-align 樣式來調整他們對齊的位置，可能的值有：
+  .row
+    .col-sm-6
+      ul
+        li text-top
+        li top
+        li bottom
+        li text-bottom
+        li middle
+        li baseline
+        li [數值]px / [數值]% / [數值]em
+    .col-sm-6
+      .text-center: img(src="http://www.htmq.com/style/images/vertical-align02.gif",style="max-width:100%")
+  +nbr(1)
+  p 下例使用不同的 align 來對齊所有區塊：
+  .row.text-center
+    .col-sm-3
+      div vertical-align: top
+      span HI
+      .exib2.vatop(style="height:25px")
+      .exib2.vatop(style="height:50px")
+      .exib2.vatop(style="height:75px")
+      .exib2.vatop(style="height:100px")
+      .exib2.vatop(style="height:125px")
+    .col-sm-3
+      div vertical-align: bottom
+      span HI
+      .exib2.vabottom(style="height:25px")
+      .exib2.vabottom(style="height:50px")
+      .exib2.vabottom(style="height:75px")
+      .exib2.vabottom(style="height:100px")
+      .exib2.vabottom(style="height:125px")
+    .col-sm-3
+      div vertical-align: middle
+      span HI
+      .exib2.vamiddle(style="height:25px")
+      .exib2.vamiddle(style="height:50px")
+      .exib2.vamiddle(style="height:75px")
+      .exib2.vamiddle(style="height:100px")
+      .exib2.vamiddle(style="height:125px")
+
+    .col-sm-3
+      div vertical-align: -50px
+      span HI
+      .exib2.vacustom(style="height:25px")
+      .exib2.vacustom(style="height:50px")
+      .exib2.vacustom(style="height:75px")
+      .exib2.vacustom(style="height:100px")
+      .exib2.vacustom(style="height:125px")
+  +nbr(2)
+  .card.bg-light: .card-body.text-center
+    h4 垂直對齊練習
+    p 試著搭配 display / width / height / vertical-align 屬性，重製下列排版：
+    .text-center: img(src="vertical-align.png")
+    //-.row
+      .col-sm-4
+        .exib2(style="vertical-align:top;height:25px;")
+        .exib2(style="vertical-align:bottom;height:50px;")
+        .exib2(style="vertical-align:bottom;height:75px;")
+      .col-sm-4
+        .exib2(style="vertical-align:bottom;height:25px;")
+        .exib2(style="vertical-align:top;height:50px;")
+        .exib2(style="vertical-align:bottom;height:75px;")
+      .col-sm-4
+        .exib2(style="vertical-align:middle;height:25px;")
+        .exib2(style="vertical-align:top;height:50px;")
+        .exib2(style="vertical-align:middle;height:75px;")
+  +nbr(2)
+  h3 水平對齊
+  p 相對垂直來說，水平對齊就比較簡單了，一次控制整個區塊的內容，透過 #[code text-align] 樣式設定靠左、靠右、置中或佔滿：
+  .row
+    .col-sm-3.text-left
+      .text-center: b.red text-align: left
+      hr
+      p Technically, what hasLayout means is an element with hasLayout set to true is responsible for rendering itself and its children (combine that with a min-height and width, and you get something ...
+    .col-sm-3.text-right
+      .text-center: b.red text-align: left
+      hr
+      p Technically, what hasLayout means is an element with hasLayout set to true is responsible for rendering itself and its children (combine that with a min-height and width, and you get something ...
+    .col-sm-3.text-center
+      .text-center: b.red text-align: left
+      hr
+      p Technically, what hasLayout means is an element with hasLayout set to true is responsible for rendering itself and its children (combine that with a min-height and width, and you get something ...
+    .col-sm-3.text-justify
+      .text-center: b.red text-align: justify
+      hr
+      p Technically, what hasLayout means is an element with hasLayout set to true is responsible for rendering itself and its children (combine that with a min-height and width, and you get something ...
+  +nbr(2)
+  h3 Flexbox
+  p 更複雜的排版與文字流可以使用 flexbox 與 css grid 來達成。由於內容頗複雜，flexbox 與 css grid 不在這裡帶大家看過，但你可以參考一些線上資源來了解他的功用，例如 #[a(href="loading.io/flexbox/",target="_blank") Flexbox Generator]
+  +nbr(2)
+  h2 進階樣式 - 轉場、動畫與線性轉換
+  hr
+  p 從 CSS3 開始提供了進階的樣式控制，包含使用 CSS 實現 3D 線性轉換、轉場效果與動畫製作。
+  h4 CSS Transform
+  p 利用 #[code transform] 樣式設定 #[code translate](位移) 、 #[code rotate](旋轉) 、 #[code scale](縮放) 三種線性轉換來達到變形效果。亦可透過 #[code transform-origin] 設定變換的相對原點。
+  ul
+    li
+      big: b 位移
+      pre.code.
+        transform: translate(20px, 20px)
+    li
+      big: b 旋轉
+      pre.code.
+        transform: rotate(45deg)
+    li
+      big: b 縮放
+      pre.code.
+        transform: scale(10)
+    li
+      big: b 矩陣形式
+      pre.code.
+        transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0)
+    li
+      big: b 設定原點
+      pre.code.
+        transform-origin: 50px 50px
+  p 三種樣式可以重覆、交錯多次填寫，只要用空格分開即可。效果將會由左往右一個個套用：
+  pre.code.
+    transform: translate(20px, 20px) rotate(45deg) scale(10)
+  +nbr(1)
+  .card: .card-body
+    .text-center: h3 Transform 練習
+    p 用教過的樣式建立一 170px #[i.fa.fa-times] 170px 大小的黃色文字區塊，然後利用 #[code transform] 樣式將之旋轉 45 度、接著縮小成 0.5 倍大：
+    +nbr(2)
+    .text-center
+      div(style="width:170px;height:170px;background:#ff9;padding:11px;display:inline-block;margin-right:50px") 各位讀者大家好，我叫正港奇片，我的興趣是創作有趣搞笑的漫畫，雖然我還有很多地方要再加強，但我會盡力分享最好的
+      div(style="width:170px;height:170px;background:#ff9;padding:11px;transform:rotate(45deg);display:inline-block;margin-right:50px;") 各位讀者大家好，我叫正港奇片，我的興趣是創作有趣搞笑的漫畫，雖然我還有很多地方要再加強，但我會盡力分享最好的
+      div(style="width:170px;height:170px;background:#ff9;padding:11px;transform:rotate(45deg) scale(0.5);display:inline-block") 各位讀者大家好，我叫正港奇片，我的興趣是創作有趣搞笑的漫畫，雖然我還有很多地方要再加強，但我會盡力分享最好的
+  +nbr(2)
+  h4 CSS Transition
+  p 轉場動畫的概念相當簡單，給定初始樣式與目標樣式，再利用 #[code transition] 樣式設定轉場速度即可。#[code transition] 的基本用法如下：
+  br
+  .text-center: big.red  transition: [欲作轉場效果的樣式名] [轉場的時間長度] [轉場變化曲線]
+  p 例如:
+  pre.code.
+    transition: width 1s linear
+  p 其中：
+  ul
+    li
+      span 樣式名亦可用 #[code all]，代表所有的樣式都要做動畫：
+      pre.code.
+        transition: all 1s linear
+    li
+      span 若不想對所有樣式做動畫，亦可用逗號「,」串接，寫多組轉場樣式，例如：
+      pre.code.
+        transition: width 1s linear, background 2s linear
+    li
+      span 轉場曲線控制變化的速率，常見的值有以下幾種：
+      ul
+        li linear ( 等速 )
+        li ease-out ( 減速 )
+        li ease-in ( 加速 )
+        li cubic-bezier([值一],[值二],[值三],[值四]) ( 貝茲曲線 )
+      p 變化曲線亦可用 #[code transition-timing-function] 直接設定，例如 #[code transition-timing-function: ease-in]。
+
+  p 搭配虛擬類別時使用起來特別方便。例如，:hover 類別代表「滑鼠移到該區塊上」的一種虛擬類別：
+  pre.code.
+    .btn {
+      width: 200px;
+      transition: width 1s linear;
+    }
+    .btn:hover { 
+      width: 400px;
+    }
+  p 加上妥善的樣式後，可以做出如下的效果：
+  style(type="text/css").
+    .exbtn {
+      width: 300px;
+      transition: width 1s linear;
+      margin: 3px auto;
+      display: block
+    }
+    .exbtn:hover {
+      width: 500px;
+    }
+  .btn.btn-primary.btn-lg.exbtn Hover Me
+  .btn.btn-primary.btn-lg.exbtn(style="transition-timing-function:ease-in") 我用 ease-in
+  .btn.btn-primary.btn-lg.exbtn(style="transition-timing-function:ease-out") 我用 ease-out
+  .btn.btn-primary.btn-lg.exbtn(style="transition-timing-function:cubic-bezier(0,1,0,1)") 我用 cubic-bezier(0,1,0,1)
+  +nbr(2)
+  .card: .card-body
+    .text-center: h3 Transition 練習
+    p 試著搭配 CSS Transform 與 #[code :hover] 虛擬類別 來製作「滑鼠一移上去就轉一圈」的文字方塊，如下範例：
+    style(type="text/css").
+      .kipen {
+        transition: all 1s linear;
+        background: #ff9;
+        width: 170px;
+        height: 170px;
+        padding: 11px;
+        display: inline-block;
+        margin-right: 50px;
+      }
+      .kipen:hover {
+        transform: rotate(360deg);
+      }
+      .k1 {
+        transition-timing-function: ease-in;
+      }
+      .k2:hover {
+        background: #99f;
+      }
+      .k3 { opacity: 0.5 }
+      .k3:hover { opacity: 1 }
+    +nbr(1)
+    .text-center
+      .kipen(style="width:170px;height:170px;background:#ff9;padding:11px;display:inline-block;margin-right:50px") 各位讀者大家好，我叫正港奇片，我的興趣是創作有趣搞笑的漫畫，雖然我還有很多地方要再加強，但我會盡力分享最好的
+    +nbr(1)
+    p 接著，追加以下樣式，讓他有不一樣的表現：
+    ul
+      li 設定 timing-function，讓他加速轉動 (圖一)
+      li 設定背景顏色，讓他變色 (圖二)
+      li
+        span 設定 #[code opacity] 樣式，讓他淡入 (圖三)。#[code opacity] 的使用範例:
+        ul
+          li #[code opacity: 0] = 完全透明
+          li #[code opacity: 1] = 完全不透明。
+    .text-center
+      .kipen.k1 各位讀者大家好，我叫正港奇片，我的興趣是創作有趣搞笑的漫畫，雖然我還有很多地方要再加強，但我會盡力分享最好的
+      .kipen.k2 各位讀者大家好，我叫正港奇片，我的興趣是創作有趣搞笑的漫畫，雖然我還有很多地方要再加強，但我會盡力分享最好的
+      .kipen.k3 各位讀者大家好，我叫正港奇片，我的興趣是創作有趣搞笑的漫畫，雖然我還有很多地方要再加強，但我會盡力分享最好的

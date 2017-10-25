@@ -11,6 +11,7 @@ block body
   ul
     li: a(href="https://jsbin.com") JSBIN 網頁實驗與源碼分享服務
     li: a(href="https://jsfiddle.net/",target="_blank") JSFiddle / 網頁練習與編輯工具
+    li: a(href="http://easings.net/") Easing / Timing Function 速查表
     li: a(href="http://blog.infographics.tw/2015/06/introduction-to-svg-graphics-on-web/") 可縮放向量圖 SVG 入門 / 資料視覺化
     li: a(href="http://www.oxxostudio.tw/articles/201410/svg-tutorial.html") SVG 完整教程 / OXXO Studio
     li: a(href="https://loading.io/animation/",target="_blank") loading.css 動畫樣板套件說明文件
@@ -219,7 +220,11 @@ block body
         li ease-out ( 減速 )
         li ease-in ( 加速 )
         li cubic-bezier([值一],[值二],[值三],[值四]) ( 貝茲曲線 )
-      p 變化曲線亦可用 #[code transition-timing-function] 直接設定，例如 #[code transition-timing-function: ease-in]。
+      p
+        span 變化曲線亦可用 #[code transition-timing-function] span 直接設定，例如 #[code transition-timing-function: ease-in]。
+        span 若要了解更詳細的變化類型與實際上的效果，可以參考
+        a(href="http://easings.net/") http://easings.net/
+        span 網站。( 註：並非這個網站裡的所有類型都可以直接用在 CSS 中，請注意其中的註釋 )
 
   p 搭配虛擬類別時使用起來特別方便。例如，:hover 類別代表「滑鼠移到該區塊上」的一種虛擬類別：
   pre.code.

@@ -260,7 +260,13 @@ block body
     tr
       td border-radius
       td <數值>px 或 百分比
-      td 方塊圓角。若需要對四個角落分別設定，則可以寫四次，將依「左上」，「右上」，「左下」，「右下」的順序繪製。
+      td
+        p 方塊圓角。若需要對四個角落分別設定，則可以寫四次，將依「左上」，「右上」，「左下」，「右下」的順序繪製。範例：
+        pre.code.
+          &lt;div style="width:40px;height:40px;border-radius:5px 10px 15px 20px"&gt;&lt;/div&gt;
+        p 上例的結果：
+        div(style="width:40px;height:40px;border-radius:5px 10px 15px 20px")
+
     tr
       td box-shadow
       td 見右

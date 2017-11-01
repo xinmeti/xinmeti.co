@@ -1,0 +1,52 @@
+extends /base.jade
+include /mixin.jade
+block body
+  style(type="text/css").
+    body {
+      background:#222;
+    }
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    a.navbar-brand(href="#") 新媒體
+    .collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.active: a.nav-link(href="#") 首頁
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href="#",data-toggle="dropdown") 課表
+          .dropdown-menu
+            a.dropdown-item 程式設計
+            a.dropdown-item 內容管理
+            a.dropdown-item 內容工程
+            a.dropdown-item 資訊架構
+        li.nav-item: a.nav-link(href="#") 作業
+        li.nav-item: a.nav-link(href="#") 資源
+  +nbr(1)
+  .jumbotron(style="background:url(bk.jpg) fixed center center;color:#fff")
+    h1.display-3 讓您跟上時代的潮流
+    p.lead 數位媒體時代，您還不會製作互動內容嗎？
+    hr
+    p 根據美國摩哲根大學摩皆雷朗教授預測，未來十年將是數位媒體的黃金十年，各種數位新聞人才將會成為當紅炸子雞，為各家媒體爭相獵頭的對象。市場規模將達到兩千五百兆億元，可說是下一波市場上最熱的產業之一。
+    .btn.btn-primary.btn-lg 現在就跟上
+
+  .row.text-center
+    .col-sm-4
+      .card(style="background:url(bk-2.jpg) fixed center center;color:#ddd"): .card-body
+        img.mb-3(src="../../04/img/1.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%;box-shadow:0 2px 4px 1px rgba(0,0,0,0.2)")
+        h5 正港奇片
+        p.text-left 大家好，我叫正港奇片，我的興趣是創作有趣搞笑的漫畫，雖然我還有很多地方要再加強，但我會盡力分享最好的
+        .btn.btn-primary.btn-block 現在就看看
+    .col-sm-4
+      .card(style="background:url(bk-2.jpg) fixed center center;color:#ddd"): .card-body
+        img.mb-3(src="../../04/img/2.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%;box-shadow:0 2px 4px 1px rgba(0,0,0,0.2)")
+        h5 公告事項
+        p.text-left ATM 僅能提款、存款、轉帳及更改密碼，沒退稅功能，無法取消扣款、分期設定，亦無法將款項轉入自己帳戶。
+        .btn.btn-danger.btn-block 立刻轉帳上當
+    .col-sm-4
+      .card(style="background:url(bk-2.jpg) fixed center center;color:#ddd"): .card-body
+        img.mb-3(src="../../04/img/3.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%;box-shadow:0 2px 4px 1px rgba(0,0,0,0.2)")
+        h5 鼎王食記
+        p.text-left 並不是有200元就可以甘願被水和麻辣湯潑，知後她驚呼，所以轉讓給想要去朋友，還可以直接外帶鍋底有夠貼心！
+        .btn.btn-success.btn-block 線上訂位
+  +nbr(1)
+  .alert.alert-warning.alert-dismissible.fade.show
+    span 自 11/6 起，賽傳媒的金閱讀月費折扣將截止，請把握機會，現在就訂閱！
+    button.close(data-dismiss="alert") &times;

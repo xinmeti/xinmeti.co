@@ -1,0 +1,374 @@
+extends /base.jade
+include /mixin.jade
+block body
+  .grayed 2017-11-02
+  big 數位專輯的骨架
+  h1 使用 Bootstrap 樣板與 jQuery 套件
+  .sep
+  +nbr(1)
+  h3 連結
+  +nbr(1)
+  ul
+    li: a(href="https://jsbin.com") JSBIN 網頁實驗與源碼分享服務
+    li: a(href="http://easings.net/") Easing / Timing Function 速查表
+    li: a(href="https://loading.io/animation/",target="_blank") loading.css 動畫樣板套件說明文件
+    li: a(href="https://loading.io/transition/",target="_blank") transition.css 過場動畫樣板套件說明文件
+    li: a(href="http://caniuse.com/") Can I Use? 瀏覽器相容性速查工具
+    li: a(href="http://getbootstrap.com/docs/4.0/getting-started/introduction/") Bootstrap CSS 網頁框架
+    li: a(href="http://fontawesome.io/") FontAwesome 字型圖示套件
+  +nbr(2)
+  h3 jQuery 套件
+  ul
+    li Modal ( Bootstrap )
+    li Tooltip ( Bootstrap )
+    li Carousel ( Bootstrap )
+    li Accordion ( Bootstrap )
+    li: a(href="http://lokeshdhakar.com/projects/lightbox2") lightbox
+    li: a(href="http://dimsemenov.com/plugins/magnific-popup/") magnific popup ( photo preview )
+    li: a(href="https://www.pixxelfactory.net/jInvertScroll/") jInvertScroll ( horizontal scrolling )
+    li: a(href="http://www.thepetedesign.com/demos/tiltedpage_scroll_demo.html") tilted page scroll
+    li: a(href="http://git.blivesta.com/animsition/fade-down/") Fade Down for page transition
+    li: a(href="https://isotope.metafizzy.co/") isotope layout plugin
+    li: a(href="http://iraycd.com/brickwork/") Brickwork
+    li: a(href="https://zurb.com/playground/twentytwenty") TwentyTwenty ( visual diff )
+    li: a(href="http://alizahid.github.io/slinky/") slinky ( in-place menu )
+    li: a(href="http://zavoloklom.github.io/material-design-hierarchical-display/") Material Design Hierarchical Display Transition
+    li: a(href="http://vdw.github.io/Tabslet/") tabslet ( tab panel )
+    li: a(href="https://nanogallery2.nanostudio.org/#_") album
+  +nbr(2)
+  h3 實作 tooltip
+  p 學過了基本的 HTML 與 CSS, 讓我們來試著做做看自己的元件吧！
+  .card
+    .card-body
+      h4.card-title Tooltip 元件準備材料
+      .card-text
+        .list-group
+          .list-group-item &lt;style&gt; 標籤
+          .list-group-item :hover 虛擬類別
+          .list-group-item .tooltip-container 與 .tooltip 類別 ( 名稱可自行決定 )
+          .list-group-item display, border-radius, background 等 css 屬性
+      +nbr(2)
+      h5 步驟如下：
+      ol
+        li
+          span 決定 HTML 架構:
+          pre.code.
+            &lt;div class="mytooltip-container"&gt;
+              我是內容
+              &lt;div class="mytooltip"&gt; 我是提醒 &lt;/div&gt;
+            &lt/div&gt;
+        li
+          span 依照 HTML 架構來設定 CSS 初始值：
+          pre.code.
+            &lt;style type="text/css"&gt;
+              .mytooltip-container .mytooltip {
+                display: none;
+              }
+              .mytooltip-container:hover .mytooltip, .mytooltip-container:active .mytooltip {
+                display: block;
+              }
+            &lt;/style&gt;
+          +nbr(1)
+          p 結果如下：
+          +nbr(1)
+          .text-center
+            .btn.btn-primary.mytooltip1-container
+              span 我是內容
+              .mytooltip1 我是提醒
+
+          style(type="text/css").
+            .mytooltip1-container .mytooltip1 {
+              display: none;
+              transition: all 1s ease-in-out;
+              transform: scale(0)
+            }
+            .mytooltip1-container:hover .mytooltip1, .mytooltip1-container:active .mytooltip1 {
+              display: block;
+              transform: scale(1);
+            }
+        li
+          span 加上額外樣式
+          .pre.code.
+            &lt;style type="text/css"&gt;
+              .mytooltip2-container {
+                #[b.red cursor: pointer;]
+                #[b.red position: relative;]
+              }
+              .mytooltip2-container .mytooltip2 {
+                display: none;
+                #[b.red position: absolute;]
+                #[b.red background: #000;]
+                #[b.red color: #fff;]
+                #[b.red padding: 5px;]
+                #[b.red border-radius: 5px;]
+              }
+              .mytooltip2-container:hover .mytooltip2, .mytooltip2-container:active .mytooltip1 {
+                display: block;
+              }
+            &lt;/style&gt;
+          style(type="text/css").
+            .mytooltip2-container {
+              cursor: pointer;
+              position: relative;
+            }
+            .mytooltip2-container .mytooltip2 {
+              display: none;
+              position: absolute;
+              background: #000;
+              color: #fff;
+              padding: 5px;
+              border-radius: 5px;
+            }
+            .mytooltip2-container:hover .mytooltip2, .mytooltip2-container:active .mytooltip1 {
+              display: block;
+            }
+          +nbr(1)
+          p 結果如下：
+          +nbr(1)
+          .text-center
+            .btn.btn-primary.mytooltip2-container
+              span 我是內容
+              .mytooltip2 我是提醒
+      h4 備註
+      ul
+        li #[code cursor] 樣式設定滑鼠在區塊上時的呈現樣貌
+        li 如果父元素有設定 #[code position: relative], 則 #[code position: absolute] 的區塊位置會相對該父元素的原點 ( 元素左上角 )
+
+  +nbr(2)
+  h3 預建樣式與 CSS 框架 Bootstrap
+  p 類似 tooltip 的 css 樣式組若每次都得重做也是相當繁瑣，這時可參考現成的 CSS 框架，以下以 Bootstrap 為例說明如何使用網路框架。
+  +nbr(1)
+  h4 載入框架
+  p 使用 #[code link] 與 #[code script] 標籤載入框架。
+  pre.code.
+    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    &lt;script src="https:&#47;/code.jquery.com/jquery-3.2.1.slim.min.js">&lt;/script>
+    &lt;script src="https:&#47;/cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js">&lt;/script>
+    &lt;script src="https:&#47;/maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js">&lt;/script>
+  +nbr(1)
+  h4 開啟文件說明
+  p Bootstrap (4.0) 的說明文件可以在#[a(href="http://getbootstrap.com/docs/4.0/getting-started/introduction/") 這裡]找到。
+  +nbr(1)
+  h4 實作練習
+  p 使用 Bootstrap Layout 搭配先前學過的 CSS 製作出以下內容：
+  +nbr(2)
+  h5 三欄式訴求
+  .card: .card-body
+    .row.text-center
+      .col-sm-4
+        img.mb-3(src="../04/img/1.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%")
+        h5 正港奇片
+        p 各位讀者大家好，我叫正港奇片，我的興趣是創作有趣搞笑的漫畫，雖然我還有很多地方要再加強，但我會盡力分享最好的
+      .col-sm-4
+        img.mb-3(src="../04/img/2.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%")
+        h5 公告事項
+        p ATM 僅能提款、存款、轉帳(轉出)及更改密碼，沒有退稅功能，也無法取消扣款、分期設定，亦無法將款項轉入自己帳戶。
+      .col-sm-4
+        img.mb-3(src="../04/img/3.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%")
+        h5 鼎王食記
+        p 並不是有200元就可以甘願被水和麻辣湯潑，知後她驚呼，所以轉讓給想要去朋友，還可以直接外帶鍋底有夠貼心！
+
+  +nbr(2)
+  h5 三欄式訴求 2
+  .card: .card-body
+    .row.text-center
+      .col-sm-4
+        .card: .card-body
+          img.mb-3(src="../04/img/1.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%")
+          h5 正港奇片
+          p 各位讀者大家好，我叫正港奇片，我的興趣是創作有趣搞笑的漫畫，雖然我還有很多地方要再加強，但我會盡力分享最好的
+      .col-sm-4
+        .card: .card-body
+          img.mb-3(src="../04/img/2.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%")
+          h5 公告事項
+          p ATM 僅能提款、存款、轉帳(轉出)及更改密碼，沒有退稅功能，也無法取消扣款、分期設定，亦無法將款項轉入自己帳戶。
+      .col-sm-4
+        .card: .card-body
+          img.mb-3(src="../04/img/3.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%")
+          h5 鼎王食記
+          p 並不是有200元就可以甘願被水和麻辣湯潑，知後她驚呼，所以轉讓給想要去朋友，還可以直接外帶鍋底有夠貼心！
+
+  +nbr(2)
+  h5 三欄式 + CTA
+  .card: .card-body
+    .row.text-center
+      .col-sm-4
+        .card: .card-body
+          img.mb-3(src="../04/img/1.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%")
+          h5 正港奇片
+          p.text-left 各位讀者大家好，我叫正港奇片，我的興趣是創作有趣搞笑的漫畫，雖然我還有很多地方要再加強，但我會盡力分享最好的
+          .btn.btn-primary.btn-block 現在就看看
+      .col-sm-4
+        .card: .card-body
+          img.mb-3(src="../04/img/2.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%")
+          h5 公告事項
+          p.text-left ATM 僅能提款、存款、轉帳(轉出)及更改密碼，沒有退稅功能，也無法取消扣款、分期設定，亦無法將款項轉入自己帳戶。
+          .btn.btn-danger.btn-block 立刻轉帳上當
+      .col-sm-4
+        .card: .card-body
+          img.mb-3(src="../04/img/3.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%")
+          h5 鼎王食記
+          p.text-left 並不是有200元就可以甘願被水和麻辣湯潑，知後她驚呼，所以轉讓給想要去朋友，還可以直接外帶鍋底有夠貼心！
+          .btn.btn-success.btn-block 線上訂位
+  +nbr(2)
+  h5 三欄式 + CTA + 提醒事項
+  .card: .card-body
+    .row.text-center
+      .col-sm-4
+        .card: .card-body
+          img.mb-3(src="../04/img/1.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%")
+          h5 正港奇片
+          p.text-left 各位讀者大家好，我叫正港奇片，我的興趣是創作有趣搞笑的漫畫，雖然我還有很多地方要再加強，但我會盡力分享最好的
+          .btn.btn-primary.btn-block 現在就看看
+      .col-sm-4
+        .card: .card-body
+          img.mb-3(src="../04/img/2.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%")
+          h5 公告事項
+          p.text-left ATM 僅能提款、存款、轉帳(轉出)及更改密碼，沒有退稅功能，也無法取消扣款、分期設定，亦無法將款項轉入自己帳戶。
+          .btn.btn-danger.btn-block 立刻轉帳上當
+      .col-sm-4
+        .card: .card-body
+          img.mb-3(src="../04/img/3.jpg",style="width:128px;height:128px;max-width:128px;border-radius:50%")
+          h5 鼎王食記
+          p.text-left 並不是有200元就可以甘願被水和麻辣湯潑，知後她驚呼，所以轉讓給想要去朋友，還可以直接外帶鍋底有夠貼心！
+          .btn.btn-success.btn-block 線上訂位
+    +nbr(1)
+    .alert.alert-warning.alert-dismissible.fade.show
+      span 自 11/6 起，賽傳媒的金閱讀月費折扣將截止，請把握機會，現在就訂閱！
+      button.close(data-dismiss="alert") &times;
+
+  +nbr(2)
+  h5 進站畫面元件 Jumbotron
+  .jumbotron
+    h1.display-3 讓您跟上時代的潮流
+    p.lead 面日響，力可史密人思；求經女跟生的度會師天！
+    hr
+    p 天、生性計下生開英，說是規水，不機的：此會印很驗亞看強他子工，思業事事最可們門土當二，高響風重福：給樣在學水同一計，議說得是們眼全。模有歷……密不說要你馬！月有能，王的且了所；就以什園幾？
+    .btn.btn-primary.btn-lg 現在就跟上
+
+  +nbr(2)
+  h5 網站標題列
+  .card: .card-info
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand(href="#") 新媒體
+      .collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active: a.nav-link(href="#") 首頁
+          li.nav-item: a.nav-link(href="#") 課表
+          li.nav-item: a.nav-link(href="#") 作業
+          li.nav-item: a.nav-link(href="#") 資源
+
+  +nbr(2)
+  h5 網站標題列 + 下拉式選單
+  .card: .card-info
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand(href="#") 新媒體
+      .collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active: a.nav-link(href="#") 首頁
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(href="#",data-toggle="dropdown") 課表
+            .dropdown-menu
+              a.dropdown-item 程式設計
+              a.dropdown-item 內容管理
+              a.dropdown-item 內容工程
+              a.dropdown-item 資訊架構
+          li.nav-item: a.nav-link(href="#") 作業
+          li.nav-item: a.nav-link(href="#") 資源
+
+  +nbr(1)
+  .sep.huge-gap
+  +nbr(1)
+  h5 全兜在一起
+  .text-center
+    a.btn.btn-primary.btn-lg.mr-2(href="sample/",target="_blank") 基本款請參考這個網頁
+    a.btn.btn-primary.btn-lg(href="sample-2/",target="_blank") 進階款請參考這個網頁
+  +nbr(3)
+  //-
+    h3 元件
+    p 斷點
+    576
+    768
+    992
+    1200
+
+    .w-25, .w-50, .w-75, .w-100
+    .h-25, .h-50, .h-75, .h-100
+    .mw-100, .mh-100
+
+    .row
+      .col
+      .col-8
+      .col-sm-8
+      .w-100 用來切 row
+      .col-auto ( based on natural width )
+      .no0gutters 拿掉 negative margin and padding
+
+    .media
+      //- mr-3 stands for margin right lv 3 ( = 1rem )
+      img.align-self-(start/end/center).(ml/mr)-3
+      .media-body
+        h5.mt-0
+    ul.list-unstyled
+      li.media
+      li.media
+      ...
+
+    //- success, primary, secondary, warning, danger, info, light, dark
+    .alert.alert-(...)
+      .alert-link //- 設定 alert 顏色
+      //- 在 alert 裡設定標題
+      //- h4.alert-heading
+    .alert.alert-dismissible.fade.show
+      button.close(data-dismiss="alert") &times;
+
+    $(".alert").alert( \close or \dispose )
+    
+    .badge.badge-()
+    .badge.badge-pill... ( 更圓 )
+    .btn.btn-()
+    .btn.btn-outline-()
+    .btn-lg, .btn-sm, ...
+    .btn-block
+    .btn.active
+    .btn(disabled)
+
+    .btn(data-toggle="button") -> 可以 toggle button to active
+
+    .btn-group (btn-group-lg, sm ..., .btn-group-vertical)
+      .btn.btn-..
+      .btn.btn-..
+    .btn-toolbar
+      .btn-group.mr-2
+        .btn.btn
+      .btn-group.mr-2
+        .btn.btn
+      ...
+
+    下拉式選單
+    .btn-group
+      .btn.btn...
+      //- 槽狀
+      .btn-group
+        //- 看到的..
+        .btn.btn...
+        .dropdown-menu // 拉出來的..
+          a.dropdown-item ...
+          a.dropdown-item ...
+
+    .card
+      .card-header
+      .card-img-top
+      .card-body
+        h*.card-title
+        h*.card-subtitle
+        .card-text
+        .card-link
+      .card-footer(.text-muted)
+
+    在 card 裡加 list
+    .card
+      ul.list-group.list-group-flush
+        .list-group-item
+        .list-group-item
+        ...

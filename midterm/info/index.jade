@@ -1,0 +1,63 @@
+extends /base.jade
+block vars
+  - var config = {jumbotron: false}
+include /mixin.jade
+block bodytop
+  .jumbotron-fluid.text-center
+    .container-fluid
+      +nbr(3)
+      h1 新媒體內容技術與設計 
+      .subtitle New Media Techniques and Design
+      +nbr(2)
+      a.btn.btn-primary.rel.has-tips(style="padding-right:40px",
+      href-disabled="/midterm/")
+        span 期中考試測驗內容 #[img.abs(src="/assets/img/pencil.svg",style="top:-15px")]
+        .hover-tip.top 還沒開放喔！
+      +nbr(5)
+block body
+  .block
+    h2.inline-block.spc-right 期中考資訊 #[a#midterm-exam.anchor]
+  .sep
+  +nbr(1)
+  p 新媒體內容技術與設計將於 11/16 在上課教室進行期中考。測驗注意事項：
+  ul
+    li 測驗方式以上機實作測驗為主。
+    li 測驗內容為課堂教過的 HTML、CSS 與 Bootstrap 網頁設計。
+    li 考試時間為三小時，熟練內容的同學應可在一小時內完成，做完交卷即可離開去玩了。
+    li Open Book - 可使用 #[a(href="https://www.google.com") Google]，可翻書，可參考課程網頁與所有練習用的程式碼。
+    li 翻書之餘，請以自己的實力完成，不與人討論。
+    li 考試內容將於測驗當天公布在 #[a(href="/midterm/") 這個地方]。
+    li 建議優先準備老師有說「這是基礎」的東西。
+    li 成績會參考整體表現做調整，實作未完成也會部份給分，請同學不用太擔心考砸。
+  +nbr(1)
+  h5 範例考題：
+  .card
+    .card-body
+      p 請於 jsbin 中實作出下圖所示之網頁排版：
+      .card.bg-light: .card-body
+        img(src="/assets/img/kirby.png",style="width:160px;display:inline-block;vertical-align:top")
+        div(style="display:inline-block;width:600px;") 小邊往兒行教算信；力法不等條物童。由小企他，創法興細那首助樂但音務費面證一阿高月年麼等道倒人住進一機本不，明是故好話有日考，服文行果當方神度投長品起有感地賽度成部簡做他樹型時？覺上深負長求著頭個方沒，了變紀需度對一陸照就分市型令、社請如三否著；公吸了自出國模是片生雲，心我病的起的候氣：寫世每起則技收天：答它語真受確這一，們的票臺起一特了價只愛器是；在失是臺消保紅世了動和空提死的水：我老全用客世主前，電十那不合因我長紙：雄的孩西品上心。會接部統形似因亮越員會，錯理險背最提舉不中那同強來他我定在，係傳你況北，錯是我表我會頭地海的業河這己少就張總間是你我供有然有有落黃！的馬可聯，形人一年生動一洲因兒……達最代育，容日屋王物的第上，入命臉們新近化羅灣節學的消。
+      .sep
+      h5 解答
+      pre.code.
+        &lt;img src="http://xinmeti.co/assets/img/kirby.png" style="width:160px;display:inline-block;vertical-align:top"&gt;
+        &lt;div style="display:inline-block;width:600px;"&gt; ... ( 內文省略 ) ... &lt;/div&gt;
+  br
+  .card: .card-body
+    p 請寫出選取下圖中紅色標籤的 CSS Selector：
+    pre.code.
+      &lt;div class="card"&gt;
+          &lt;img src="hello.png"&gt;
+          &lt;div&gt;
+              #[b.red &lt;img src="thumbnail.png"&gt;]
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+          &lt;div&gt;
+              &lt;img src="thumbnail.png"&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    .sep
+    h5 解答
+    p #[code .card > div > img]
+

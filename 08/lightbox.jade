@@ -1,0 +1,14 @@
+a.lightbox(href="/04/img/1.jpg"): img(src="/04/img/1.jpg",style="width:320px")
+a.lightbox(href="/04/img/2.jpg"): img(src="/04/img/2.jpg",style="width:320px")
+a.lightbox(href="/04/img/3.jpg"): img(src="/04/img/3.jpg",style="width:320px")
+a.lightbox(href="/04/img/4.jpg"): img(src="/04/img/4.jpg",style="width:320px")
+a.lightbox(href="/04/img/5.jpg"): img(src="/04/img/5.jpg",style="width:320px")
+a.lightbox(href="/04/img/6.jpg"): img(src="/04/img/6.jpg",style="width:320px")
+script.
+  $(document).ready(function() {
+    $('.lightbox').magnificPopup({
+      type:'image',
+      mainClass: 'zoom',
+      zoom: {enabled: true}
+    });
+  });

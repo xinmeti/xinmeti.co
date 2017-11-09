@@ -1,5 +1,9 @@
 extends /base.jade
 include /mixin.jade
+block head
+  script(src="/lib/jquery.magnific-popup.min.js")
+  link(rel="stylesheet" type="text/css" href="/lib/magnific-popup.css")
+  link(rel="stylesheet" type="text/css" href="/lib/transition.css")
 block body
   .grayed 2017-11-02
   big 數位專輯的骨架
@@ -9,10 +13,108 @@ block body
   h3 連結
   +nbr(1)
   ul
-    li: a(href="https://jsbin.com") JSBIN 網頁實驗與源碼分享服務
+    li: a(href="http://jsbin.com") JSBIN 網頁實驗與源碼分享服務
     li: a(href="https://dribbble.com/search?q=landing") 到達頁版型設計參考
   +nbr(2)
-  .text-center: big 由於進度調整，本週課程內容請參照#[a(href="/07/") 上週網頁]。
+  .text-center: big 由於進度調整，本週課程內容亦請參照#[a(href="/07/") 上週網頁]。
   +nbr(3)
+  h3 Accordion Effect
+  +nbr(1)
+  include accordion.html
+  pre.code.
+    &lt;div #[b.red id="accordion"]&gt;
+      &lt;div class="card"&gt;
+        &lt;a class="card-header" #[b.red data-toggle="collapse" href="#block1"]&gt; Collapsible Group Item #1 &lt;/a&gt;
+        &lt;div #[b.red id="block1" class="collapse show" data-parent="#accordion"]&gt;
+          &lt;div class="card-body"&gt; Some Random Text &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="card"&gt;
+        &lt;a class="card-header" #[b.red data-toggle="collapse" href="#block2"]&gt; Collapsible Group Item #2 &lt;/a&gt;
+        &lt;div #[b.red id="block2" class="collapse" data-parent="#accordion"]&gt;
+          &lt;div class="card-body"&gt; Some Random Text &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
 
+  +nbr(3)
+  h3 Carousel Effect
+  +nbr(1)
+  include carousel.html
+  pre.code.
+    &lt;div id="carouselExampleControls" class="carousel slide" data-ride="carousel"&gt;
+      &lt;div class="carousel-inner"&gt;
+        &lt;div class="carousel-item active"&gt;
+          &lt;img class="d-block w-100" src="http:&#47;&#47;xinmeti.co/04/img/1.jpg" alt="First slide"&gt;
+        &lt;/div&gt;
+        &lt;div class="carousel-item"&gt;
+          &lt;img class="d-block w-100" src="http:&#47;&#47;xinmeti.co/04/img/2.jpg" alt="Second slide"&gt;
+        &lt;/div&gt;
+        &lt;div class="carousel-item"&gt;
+          &lt;img class="d-block w-100" src="http:&#47;&#47;xinmeti.co/04/img/3.jpg" alt="Third slide"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"&gt;
+        &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+        &lt;span class="sr-only"&gt;Previous&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"&gt;
+        &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+        &lt;span class="sr-only"&gt;Next&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
 
+  +nbr(3)
+  h3 Modal Effect
+  +nbr(1)
+  include modal.html
+  pre.code.
+    &lt;div class="modal" tabindex="-1" role="dialog" #[b.green id="mymodal"] #[b.red style="display:block;position:static"]&gt;
+      &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content"&gt;
+          &lt;div class="modal-header"&gt;
+            &lt;h5 class="modal-title"&gt;Modal title&lt;/h5&gt;
+            &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+              &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-body"&gt;
+            &lt;p&gt;Modal body text goes here.&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="modal-footer"&gt;
+            &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+            &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  p 接著，拿掉紅色部份，再加上觸發按鈕
+  .btn.btn-primary.btn-lg.btn-block(data-toggle="modal",data-target="#mymodal") Launch demo modal
+  +nbr(3)
+  h3 Lightbox
+  small.grayed 隨意點擊下圖以確認效果
+  +nbr(2)
+  include lightbox.jade
+  +nbr(2)
+  h5 使用方法
+  p 引入必要函式庫：
+  pre.code.
+    &lt;script src="http:&#47;&#47;xinmeti.co/lib/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http:&#47;&#47;xinmeti.co/lib/jquery.magnific-popup.min.js"&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" type="text/css" href="http:&#47;&#47;xinmeti.co/lib/magnific-popup.css"&gt;
+  p 接著建立圖片列表。設定寬度讓他們排得整齊，並給定類別方便之後取用：
+  pre.code.
+    &lt;img class="mybox" src="http:&#47;&#47;xinmeti.co/04/img/1.jpg" style="width:200px"&gt;
+    &lt;img class="mybox" src="http:&#47;&#47;xinmeti.co/04/img/2.jpg" style="width:200px"&gt;
+    &lt;img class="mybox" src="http:&#47;&#47;xinmeti.co/04/img/3.jpg" style="width:200px"&gt;
+  p 使用下列程式碼建利效果：
+  pre.code.
+    &lt;script&gt;
+      $(document).ready(function() {
+        $('.lightbox').magnificPopup({
+          type:'image',
+          mainClass: 'zoom',
+          zoom: {enabled: true}
+        });
+      });
+    &lt;/script&gt;

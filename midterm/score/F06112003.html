@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        font-family: arial;
+      }
+      textarea {
+        font-size: 16px;
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px;
+      }
+      h3 {
+        margin: 30px 0 5px;
+        font-family: arial;
+      }
+      .score {
+        color: #f00;
+        font-weight: 200;
+        font-size: 16px;
+        margin-left: 30px;
+      }
+      .comment {
+        margin-left: 100px;
+        font-weight: 200;
+        font-size: 14px;
+        color: #999;
+      }
+      .total {
+        color: #f00;
+        font-size: 32px;
+        float:right;
+      }
+      .total span {
+        color: #999;
+        font-size: 24px;
+      }
+      .total .value {
+        display: inline
+      }
+    </style>
+  </head>
+  <body>
+    <div style="margin:auto;max-width:1024px;width:96%;">
+      <div class="total"><span>總分 / </span> 
+        <div class="value">241</div>
+      </div>
+      <h2>考生姓名: 涂越 / 學號: F06112003</h2>
+      <hr><span>短評: 很厲害了！css selector  可以再加強一點</span>
+      <h3>css1<span class="score">得分: 32</span>
+      </h3>
+      <textarea rows="8">&lt;span&gt;才不是為了你呢&lt;/span&gt;
+&lt;span style=&quot;font-size:20px;background-color:#f00&quot;;&gt;才不是為了你呢&lt;/span&gt;</textarea>
+      <h3>css2<span class="score">得分: 16</span>
+      </h3>
+      <textarea rows="8">&lt;h1&gt;就少一個插座用，很不方便&lt;/h1&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+&lt;/style&gt;
+&lt;h1&gt;就少一個插座用，很不方便&lt;/h1&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  h1{
+    font-size:20px;
+    background-color:#f00;
+    color:#fff;
+    width:300px;
+    text-align:center;
+    padding:10px 20px;
+  }
+  &lt;/style&gt;</textarea>
+      <h3>css3<span class="score">得分: 10</span>
+      </h3>
+      <textarea rows="8">&lt;link&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://xinmeti.co/lib/loading.css&quot;&gt;
+  &lt;div class=&quot;ld ld-spin&quot; style=&quot;height:60px;width:60px;background:#000;&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;</textarea>
+      <h3>css4<span class="score">得分: 5</span>
+      </h3>
+      <textarea rows="8">&lt;div style=&quot;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;width:600px;height:100px;border:10px #666 solid;border-radius:20px; background-image:url(http://xinmeti.co/midterm/img/firefly.gif);color:#fff;font-size:48px;text-align:center;&quot;&gt;「BLA BA BA BAH~」&lt;/div&gt;</textarea>
+      <h3>selector1<span class="score">得分: 30</span><span class="comment">註: active 前漏了 &quot;.&quot;</span>
+      </h3>
+      <textarea rows="8">.item{
+  color: red;
+}
+.item active{
+  background: black;
+}</textarea>
+      <h3>selector2<span class="score">得分: 16</span>
+      </h3>
+      <textarea rows="8">&lt;div class=&quot;btn&quot;&gt;發射核彈&lt;/div&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  .btn {
+    background: #249;
+    color: white;
+    padding: 5px 10px;
+  }
+ .btn:hover{
+    background-color:#fff;
+    color:#f00;
+  }
+&lt;/style&gt;</textarea>
+      <h3>selector4<span class="score">得分: 5</span>
+      </h3>
+      <textarea rows="8">a.item - 第 1,2,3行
+.active a.item - 第 2 行
+#link.dropdown a.item - 第 3 行
+.item.large - 第 1,3 行</textarea>
+      <h3>bootstrap2<span class="score">得分: 15</span><span class="comment">註: 關不掉</span>
+      </h3>
+      <textarea rows="8">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot; integrity=&quot;sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+  &lt;div class=&quot;alert alert-warning alert-dismissible fade show&quot; role=&quot;alert&quot;&gt;
+  &lt;strong&gt;你就要错过这次考试了！&lt;/strong&gt;  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;立刻申请补考&lt;/button&gt; &lt;span style=&quot;color:#00e&quot;&gt;把我当了吧&lt;/span&gt;
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+  &lt;/button&gt;</textarea>
+      <h3>html1<span class="score">得分: 32</span>
+      </h3>
+      <textarea rows="8">&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;HTML部分第一题&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;img src=&quot;http://xinmeti.co/04/img/1.jpg&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>html2<span class="score">得分: 16</span>
+      </h3>
+      <textarea rows="8">&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;HTML部分第二题&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;a href=&quot;http://xinmeti.co/&quot;&gt;新媒体&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>html3<span class="score">得分: 10</span>
+      </h3>
+      <textarea rows="8">&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;HTML部分第三题&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+one piece!
+&lt;ul&gt;
+  &lt;li&gt;鲁夫&lt;/li&gt;
+  &lt;li&gt;索隆&lt;/li&gt;
+  &lt;li&gt;奈美&lt;/li&gt;
+  &lt;li&gt;乔巴&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>html4<span class="score">得分: 5</span><span class="comment">註: 完美</span>
+      </h3>
+      <textarea rows="8">&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;HTML部分第四题&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;視覺化編程 - 該選什麼語言？&lt;/h1&gt;
+  &lt;hr&gt;
+&lt;h2&gt;JavaScript — 資料呈現的王者&lt;/h2&gt;
+&lt;p&gt;憑藉著彈性的網頁介面， JavaScript 可說是當前最適合做資訊傳遞的媒介語言了，他所能運行的平台也超乎想像的廣。&lt;/p&gt;
+&lt;p&gt;然而，要利用 JavaScript 實作資料視覺化，通常也代表我們必須要一併學習 HTML 、 SVG 甚至 CSS ，有時並不會這麼容易就上手。&lt;/p&gt;
+&lt;h2&gt;R — 資料分析的霸主&lt;/h2&gt;
+&lt;p&gt;以一些更複雜的功能來說， R 本身就有內建像是 Covariance (cov) 、甚至 PCA (Princomp) 的分析，沒有內建的演算法也往往可以在 CRAN Package 中找到，這點 JavaScript 可說是望塵莫及！&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>selector3<span class="score">得分: 2</span><span class="comment">註: 有寫有得分</span>
+      </h3>
+      <textarea rows="8">.a b{
+}</textarea>
+      <h3>bootstrap1<span class="score">得分: 32</span>
+      </h3>
+      <textarea rows="8">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot; integrity=&quot;sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;请不要按&lt;/button&gt;</textarea>
+      <h3>bootstrap4<span class="score">得分: 5</span>
+      </h3>
+      <textarea rows="8">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+  &lt;div class=&quot;card&quot; style=&quot;width: 20rem;&quot;&gt;
+ 
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;h3 class=&quot;card-title&quot;&gt;登录新媒体网站&lt;/h3&gt;
+    &lt;hr&gt;
+    &lt;form&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;exampleInputEmail1&quot;&gt;使用者账号&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; aria-describedby=&quot;emailHelp&quot; placeholder=&quot;请输入账号……&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;exampleInputPassword1&quot;&gt;密码&lt;/label&gt;
+    &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;最短六个字元&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-check&quot;&gt;
+    &lt;label class=&quot;form-check-label&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input&quot;&gt;
+      我愿意受到新媒体相关课程的电子报
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;注册&lt;/button&gt;
+      &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary &quot;&gt;登入&lt;/button&gt;
+&lt;/form&gt;
+  
+  &lt;/div&gt;
+&lt;/div&gt;
+  
+  &lt;style type=&quot;text/css&quot;&gt;
+    .btn{
+      width:45%;
+      margin:0 auto;
+    }
+  &lt;/style&gt;</textarea>
+      <h3>bootstrap3<span class="score">得分: 10</span><span class="comment">註: 全班只有兩個人做到這程度</span>
+      </h3>
+      <textarea rows="8">&lt;body&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://fontawesome.io/assets/css/pygments.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://fontawesome.io/assets/css/site.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://fontawesome.io/assets/font-awesome/css/font-awesome.css&quot;&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+  
+&lt;div class=box&gt;
+    &lt;div class=&quot;col-sm-3 black&quot; &gt;&lt;i class=&quot;fa fa-star fa-5x&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;  
+    &lt;div class=&quot;col-sm-3 grey&quot; &gt;&lt;/div&gt;
+    &lt;div class=&quot;col-sm-3 black&quot; &gt;&lt;/div&gt;  
+    &lt;div class=&quot;col-sm-3 grey&quot; &gt;&lt;/div&gt;
+  
+     &lt;div class=&quot;col-sm-3 grey&quot; &gt;&lt;/div&gt;
+   &lt;div class=&quot;col-sm-3 black&quot; &gt;&lt;i class=&quot;fa fa-star fa-5x&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class=&quot;col-sm-3 grey&quot; &gt;&lt;/div&gt;
+    &lt;div class=&quot;col-sm-3 black&quot; &gt;&lt;/div&gt;  
+    
+   &lt;div class=&quot;col-sm-3 black&quot; &gt;&lt;/div&gt;  
+    &lt;div class=&quot;col-sm-3 grey&quot; &gt;&lt;/div&gt;
+    &lt;div class=&quot;col-sm-3 black&quot; &gt;&lt;i class=&quot;fa fa-star fa-5x&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;  
+    &lt;div class=&quot;col-sm-3 grey&quot; &gt;&lt;/div&gt;
+
+    &lt;div class=&quot;col-sm-3 grey&quot; &gt;&lt;/div&gt;
+   &lt;div class=&quot;col-sm-3 black&quot; &gt;&lt;/div&gt;
+  &lt;div class=&quot;col-sm-3 grey&quot; &gt;&lt;/div&gt;
+    &lt;div class=&quot;col-sm-3 black&quot; &gt;&lt;i class=&quot;fa fa-star fa-5x&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;    
+        
+    &lt;/div&gt;
+  
+  &lt;style type=&quot;text/css&quot;&gt;
+    *{
+      margin:0;
+      padding:0;
+    }
+    .grey{
+      background-color:#ccc;
+      color:#ccc;
+      
+    }
+    .fa-star{
+      color:#fff;
+      margin:15% auto;
+    }
+    .black{
+      background-color:#000;
+      color:#000;
+    }
+    .box{
+      width:400px;
+      height:400px;
+    }
+    .col-sm-3{
+      height:25%
+    }
+  &lt;/style&gt;
+&lt;/body&gt;</textarea>
+    </div>
+  </body>
+</html>

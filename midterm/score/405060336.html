@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        font-family: arial;
+      }
+      textarea {
+        font-size: 16px;
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px;
+      }
+      h3 {
+        margin: 30px 0 5px;
+        font-family: arial;
+      }
+      .score {
+        color: #f00;
+        font-weight: 200;
+        font-size: 16px;
+        margin-left: 30px;
+      }
+      .comment {
+        margin-left: 100px;
+        font-weight: 200;
+        font-size: 14px;
+        color: #999;
+      }
+      .total {
+        color: #f00;
+        font-size: 32px;
+        float:right;
+      }
+      .total span {
+        color: #999;
+        font-size: 24px;
+      }
+      .total .value {
+        display: inline
+      }
+    </style>
+  </head>
+  <body>
+    <div style="margin:auto;max-width:1024px;width:96%;">
+      <div class="total"><span>總分 / </span> 
+        <div class="value">212</div>
+      </div>
+      <h2>考生姓名: 蔣亞岑 / 學號: 405060336</h2>
+      <hr><span>短評: 基礎不錯但 css selector 要再加強</span>
+      <h3>css1<span class="score">得分: 31</span><span class="comment">註: 是背景紅不是字紅, 顯然看錯題目</span>
+      </h3>
+      <textarea rows="8">&lt;span style=&quot;color:red;font-size:20px&quot;&gt;才不是為了你呢&lt;/span&gt;</textarea>
+      <h3>css2<span class="score">得分: 16</span>
+      </h3>
+      <textarea rows="8">&lt;h1&gt;就少一個插座用，很不方便&lt;/h1&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+h1{font-size:20px;background:red;color:white;width:300px;text-align:center; padding:10px 20px 10px 20px}
+&lt;/style&gt;</textarea>
+      <h3>css3<span class="score">得分: 9</span><span class="comment">註: 漏了一個 &quot;</span>
+      </h3>
+      <textarea rows="8">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot; http://xinmeti.co/lib/loading.css &gt;
+&lt;div style=&quot;width:60px;height:60px;background:black;class=&quot;ld ld-spin&quot;&gt;&lt;/div&gt;</textarea>
+      <h3>css4<span class="score">得分: 3</span><span class="comment">註: 未置中, 多餘的 h1, border 沒出來</span>
+      </h3>
+      <textarea rows="8">&lt;div style=&quot;width:600px;height:100px;background:black;
+            border-radius:20px;border-width:50px;border-color:
+            grey;background-image:url( http://i.imgur.com/eyCxsze.gif)&quot;&gt;&lt;h1 style=&quot;color:white;font-size:48px&quot;&gt;BLA BA BA BAH~&lt;/h1&gt;&lt;/div&gt;</textarea>
+      <h3>selector1<span class="score">得分: 16</span><span class="comment">註: 語法錯但概念對.</span>
+      </h3>
+      <textarea rows="8">&lt;style type=&quot;text/css&quot;&gt;
+class=&quot;item&quot; {color: red}
+ class=&quot;item active&quot;{color:red;background: black}
+class=&quot;item&quot;{color:red}
+&lt;/style&gt;</textarea>
+      <h3>selector2<span class="score">得分: 16</span>
+      </h3>
+      <textarea rows="8">&lt;div class=&quot;btn&quot;&gt;發射核彈&lt;/div&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  .btn {
+    background: #249;
+    color: white;
+    padding: 5px 10px;
+  }
+.btn:hover{background:white;color:red}
+
+&lt;/style&gt;</textarea>
+      <h3>selector4<span class="score">得分: 1</span>
+      </h3>
+      <textarea rows="8">a.item - 第 3行
+.active a.item - 第 2 行
+#link.dropdown a.item - 第 4 行
+.item.large - 第 1 行</textarea>
+      <h3>bootstrap2<span class="score">得分: 16</span>
+      </h3>
+      <textarea rows="8">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;div class=&quot;alert alert-warning alert-dismissible fade show&quot; role=&quot;alert&quot; style=&quot;border-width:10px;border-color:white&quot;&gt;
+  &lt;strong&gt;你就要錯過這次考試了!&lt;/strong&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;立刻申請補考
+  &lt;/button&gt;&lt;span style=color:blue&gt;把我當了吧
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</textarea>
+      <h3>html1<span class="score">得分: 32</span>
+      </h3>
+      <textarea rows="8">&lt;img src=&quot; http://xinmeti.co/04/img/1.jpg&quot;&gt;</textarea>
+      <h3>html2<span class="score">得分: 16</span>
+      </h3>
+      <textarea rows="8">&lt;a href=&quot;http://xinmeti.co/&quot;&gt;新媒體&lt;/a&gt;</textarea>
+      <h3>html3<span class="score">得分: 10</span>
+      </h3>
+      <textarea rows="8">&lt;ul&gt;
+  &lt;li&gt;魯夫
+  &lt;li&gt;索隆
+  &lt;li&gt;納美
+  &lt;li&gt;喬巴
+  &lt;/ul&gt;</textarea>
+      <h3>html4<span class="score">得分: 5</span><span class="comment">註: 完美</span>
+      </h3>
+      <textarea rows="8">&lt;h1&gt;視覺化編程-該選什麼語言?&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2&gt;JavaScript — 資料呈現的王者&lt;/h2&gt;
+&lt;p&gt;憑藉著彈性的網頁介面， JavaScript 可說是當前最適合做資訊傳遞的媒介語言了，他所能運行的平台也超乎想像的廣。&lt;/p&gt;
+&lt;p&gt;然而，要利用 JavaScript 實作資料視覺化，通常也代表我們必須要一併學習 HTML 、 SVG 甚至 CSS ，有時並不會這麼容易就上手。&lt;/p&gt;
+&lt;br&gt;
+&lt;h2&gt;R — 資料分析的霸主&lt;/h2&gt;
+&lt;p&gt;以一些更複雜的功能來說， R 本身就有內建像是 Covariance (cov) 、甚至 PCA (Princomp) 的分析，沒有內建的演算法也往往可以在 CRAN Package 中找到，這點 JavaScript 可說是望塵莫及！&lt;/p&gt;</textarea>
+      <h3>bootstrap1<span class="score">得分: 32</span>
+      </h3>
+      <textarea rows="8">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; style=&quot;border-width:10px;border-color:white&quot;&gt;請不要按&lt;/button&gt;</textarea>
+      <h3>bootstrap3<span class="score">得分: 8</span><span class="comment">註: 1. div忘了關  2. 星星不會做. 基本架構正確, 少數寫得出來的同學!</span>
+      </h3>
+      <textarea rows="8">&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-3&quot; style=background:black&gt; (這格放星星,但老師抱歉我不會放)
+&lt;div class=&quot;col-3&quot; style=background:grey&gt;
+&lt;div class=&quot;col-3&quot; style=background:black&gt;
+&lt;div class=&quot;col-3&quot; style=background:grey&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-3&quot; style=background:grey&gt;
+&lt;div class=&quot;col-3&quot; style=background:black&gt;  (這格放星星,但老師抱歉我不會放)
+&lt;div class=&quot;col-3&quot; style=background:grey&gt;
+&lt;div class=&quot;col-3&quot; style=background:black&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-3&quot; style=background:black&gt;
+&lt;div class=&quot;col-3&quot; style=background:grey&gt;
+&lt;div class=&quot;col-3&quot; style=background:black&gt; (這格放星星,但老師抱歉我不會放)
+&lt;div class=&quot;col-3&quot; style=background:grey&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-3&quot; style=background:grey&gt;
+&lt;div class=&quot;col-3&quot; style=background:black&gt;
+&lt;div class=&quot;col-3&quot; style=background:grey&gt;
+&lt;div class=&quot;col-3&quot; style=background:black&gt;  (這格放星星,但老師抱歉我不會放)</textarea>
+      <h3>bootstrap4<span class="score">得分: 2</span><span class="comment">註: 表單要使用 input 而非 btn. 但做得很像, 部份給分</span>
+      </h3>
+      <textarea rows="8">(我寫了兩種)
+
+&lt;h1 style=&quot;font-weight:bold&quot;&gt;登入新媒體網站&lt;/h1&gt;
+&lt;hr&gt;
+使用者帳號&lt;br&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot;&gt;請輸入帳號.....
+  &lt;/button&gt;&lt;br&gt;
+密碼&lt;br&gt;
+ &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot;&gt;最短6個字元
+  &lt;/button&gt;&lt;br&gt;
+ &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; style=&quot;border-width:10px;border-color:white&quot;&gt;註冊&lt;/button&gt;
+  
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; style=&quot;border-width:10px;border-color:white&quot;&gt;登入&lt;/button&gt;
+  
+ &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+
+
+  
+
+
+  &lt;div class=&quot;card&quot; style=&quot;width: 20rem;&quot;&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;h4 class=&quot;card-title&quot;&gt;登入新媒體網站&lt;/h4&gt;
+    &lt;h6 class=&quot;card-subtitle mb-2 text-muted&quot;&gt;使用者帳號&lt;/h6&gt;&lt;br&gt;  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot;&gt;請輸入帳號.....
+  &lt;/button&gt;&lt;br&gt;&lt;br&gt;&lt;h6 class=&quot;card-subtitle mb-2 text-muted&quot;&gt;密碼&lt;/h6&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot;&gt;請輸入密碼.....
+  &lt;/button&gt;&lt;br&gt;
+  
+    &lt;a href=&quot;#&quot; class=&quot;card-link&quot;&gt;註冊&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;card-link&quot;&gt;登入&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+    </div>
+  </body>
+</html>

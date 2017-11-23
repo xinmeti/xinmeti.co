@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        font-family: arial;
+      }
+      textarea {
+        font-size: 16px;
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px;
+      }
+      h3 {
+        margin: 30px 0 5px;
+        font-family: arial;
+      }
+      .score {
+        color: #f00;
+        font-weight: 200;
+        font-size: 16px;
+        margin-left: 30px;
+      }
+      .comment {
+        margin-left: 100px;
+        font-weight: 200;
+        font-size: 14px;
+        color: #999;
+      }
+      .total {
+        color: #f00;
+        font-size: 32px;
+        float:right;
+      }
+      .total span {
+        color: #999;
+        font-size: 24px;
+      }
+      .total .value {
+        display: inline
+      }
+    </style>
+  </head>
+  <body>
+    <div style="margin:auto;max-width:1024px;width:96%;">
+      <div class="total"><span>總分 / </span> 
+        <div class="value">169</div>
+      </div>
+      <h2>考生姓名: 許柏蒼 / 學號: 405060283</h2>
+      <hr><span>短評: 漏了重點 lib, 要請再複習加 lib 的部份.  selector 部份很可惜, 請再加強～ 其它部份做得很好!</span>
+      <h3>css1<span class="score">得分: 32</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;span style=&quot;background:red;font-size:20px;&quot;&gt; 才不是為了你呢 &lt;/span&gt;
+  
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>css2<span class="score">得分: 16</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;就少一個插座用，很不方便&lt;/h1&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  h1{font-size: 20px;
+background: red;
+color: white;
+width: 300px;
+text-align:center;
+
+padding-top:10px;
+padding-bottom: 10px;    
+padding-left:20px;
+  padding-right:20px;}
+&lt;/style&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>css3<span class="score">得分: 9</span><span class="comment">註: 漏了括號</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot; http://xinmeti.co/lib/loading.css&quot;&gt;
+&lt;div style=&quot;width:60px;height:60px;background:black;  class=&quot;ld ld-spin&quot;;&quot;&gt;  
+  &lt;/div&gt;
+&lt;/style&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>css4<span class="score">得分: 5</span><span class="comment">註: 不小心把背景搞黑了. 不影響計分</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style=&quot;color:white;font-size:48px;text-align:center;background:url(http://i.imgur.com/eyCxsze.gif);border-width:10px;border-color:gray;border-style:solid;border-radius:20px;width:600px;height:100px;background:black;&quot;&gt;
+  BLA BA BA BAH~
+&lt;/div&gt;
+
+&lt;/style&gt;
+&lt;/body&gt;
+&lt;/html&gt;&gt;</textarea>
+      <h3>selector1<span class="score">得分: 0</span>
+      </h3>
+      <textarea rows="8">???? {
+  color: red;
+}
+???? {
+  background: black;
+}</textarea>
+      <h3>selector2<span class="score">得分: 8</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;btn&quot;&gt;發射核彈&lt;/div&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  .btn {
+    background: #249;
+    color: white;
+    padding: 5px 10px;
+  }
+
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-danger&quot;&gt;發射核彈&lt;/button&gt;
+  
+&lt;/div&gt;
+&lt;/style&gt;
+&lt;/style&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>selector4<span class="score">得分: 0</span>
+      </h3>
+      <textarea rows="8">a.item - 第 ? 行
+.active a.item - 第 ? 行
+#link.dropdown a.item - 第 ? 行
+.item.large - 第 ? 行</textarea>
+      <h3>bootstrap2<span class="score">得分: 12</span><span class="comment">註: 漏了 lib</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;alert alert-warning alert-dismissible fade show&quot;&gt;
+  &lt;span&gt;你就要錯過這次考試了! 立刻申請補考 把我當了吧
+  &lt;button data-dismiss=&quot;alert&quot; class=&quot;close&quot;&gt;×&lt;/button&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>html1<span class="score">得分: 32</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;img src=&quot;http://xinmeti.co/04/img/1.jpg&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>html2<span class="score">得分: 16</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;a href=&quot;http://xinmeti.co/&quot;&gt;新媒體&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>html3<span class="score">得分: 10</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;ul&gt;    
+      &lt;li&gt;魯夫&lt;/li&gt;
+      &lt;li&gt;索隆&lt;/li&gt;
+      &lt;li&gt;娜美&lt;/li&gt;
+      &lt;li&gt;喬巴&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>html4<span class="score">得分: 5</span><span class="comment">註: h2 與 h3 應一致但不影響計分, 其它部份很完美.</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;視覺化編程-該選什麼語言?&lt;/h1&gt;
+  &lt;hr&gt;
+  &lt;h2&gt;JavaScript-資料呈現的王者&lt;/h2&gt;
+  &lt;p&gt;憑藉著彈性的網頁介面， JavaScript 可說是當前最適合做資訊傳遞的媒介語言了，他所能運行的平台也超乎想像的廣&lt;/p&gt;
+  
+  &lt;p&gt;然而，要利用 JavaScript 實作資料視覺化，通常也代表我們必須要一併學習 HTML 、 SVG 甚至 CSS ，有時並不會這麼容易就上手。&lt;/p&gt;
+&lt;h3&gt;R — 資料分析的霸主&lt;/h3&gt;
+  &lt;p&gt;以一些更複雜的功能來說， R 本身就有內建像是 Covariance (cov) 、甚至 PCA (Princomp) 的分析，沒有內建的演算法也往往可以在 CRAN Package 中找到，這點 JavaScript 可說是望塵莫及！&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>bootstrap1<span class="score">得分: 24</span><span class="comment">註: 漏了重要的 bootstrap lib</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;請不要按&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        font-family: arial;
+      }
+      textarea {
+        font-size: 16px;
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px;
+      }
+      h3 {
+        margin: 30px 0 5px;
+        font-family: arial;
+      }
+      .score {
+        color: #f00;
+        font-weight: 200;
+        font-size: 16px;
+        margin-left: 30px;
+      }
+      .comment {
+        margin-left: 100px;
+        font-weight: 200;
+        font-size: 14px;
+        color: #999;
+      }
+      .total {
+        color: #f00;
+        font-size: 32px;
+        float:right;
+      }
+      .total span {
+        color: #999;
+        font-size: 24px;
+      }
+      .total .value {
+        display: inline
+      }
+    </style>
+  </head>
+  <body>
+    <div style="margin:auto;max-width:1024px;width:96%;">
+      <div class="total"><span>總分 / </span> 
+        <div class="value">186</div>
+      </div>
+      <h2>考生姓名: 黃佩瑄 / 學號: 405060207</h2>
+      <hr><span>短評: bootstrap 學得還不錯, 未來改現成樣版就不難, 但基礎有些不穩固, 還是要補好 HTML/CSS 的基礎喔</span>
+      <h3>css1<span class="score">得分: 32</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;   
+  &lt;span style=&quot;font-size:20px;background-color:red&quot;&gt;
+   才不是為了你呢&lt;/span&gt; 
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>css2<span class="score">得分: 15</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;   
+ &lt;h1&gt;就少一個插座用，很不方便&lt;/h1&gt;
+  &lt;style type=&quot;text/css&quot;&gt;
+  h1 { font-size:20px;background-color:red;color:white;width:300px;text-align:center;padding-left:20px;padding-right:20px;padding-top:10px;padding-bottom:10px}
+&lt;/style&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>css3<span class="score">得分: 3</span><span class="comment">註: 未載入 loading.css</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;   
+ &lt;link&gt;
+&lt;div style=&quot;width:60px;height:60px;background-color:black&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;ld-spin-fast&quot;&gt;
+&lt;/div&gt;
+  
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>css4<span class="score">得分: 3</span><span class="comment">註: border 做錯, div 放錯位置</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+  
+   &lt;div style=&quot;background-color:black;
+             width:600px;height:100px;
+             background-image:url(http://xinmeti.co/midterm/img/firefly.gif);
+             border-color:#444;
+             border-width:10px;
+             border-radius:10px 10px 10px 10px&quot;&gt;&lt;/div&gt;
+&lt;/head&gt;
+&lt;body&gt;   
+
+   &lt;div&gt;
+     &lt;span style=&quot;font-size:48px;color:white;text-align:center;position:absolute;top:30px;right:260px&quot;&gt;BLA BA BA BAH~&lt;/span&gt; 
+  
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>selector1<span class="score">得分: 16</span><span class="comment">註: 原題是希望就已有的 html 寫出 css selector. 雖然效果有做出來，但並非要求的答案</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;&lt;span class=&quot;item&quot;&gt;1&lt;/span&gt;&lt;/h1&gt; 
+&lt;h2&gt;&lt;span class=&quot;item active&quot;&gt;2&lt;/span&gt;&lt;/h2&gt;
+&lt;h3&gt;&lt;div class=&quot;item&quot;&gt;3&lt;/div&gt;&lt;/h3&gt; 
+  &lt;style type=&quot;text/css&quot;&gt;
+h1  {
+  color: red;
+}
+
+h2 {
+    background: black;color: red;
+  }
+h3 {
+  color: red;
+}
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>selector2<span class="score">得分: 0</span>
+      </h3>
+      <textarea rows="8">&lt;div class=&quot;btn&quot;&gt;發射核彈&lt;/div&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  .btn {
+    background: #249;
+    color: white;
+    padding: 5px 10px;
+  }
+  ????
+&lt;/style&gt;</textarea>
+      <h3>selector4<span class="score">得分: 0</span>
+      </h3>
+      <textarea rows="8">a.item - 第2行
+.active a.item - 第 5 行
+#link.dropdown a.item - 第 10 行
+.item.large - 第 ?14行</textarea>
+      <h3>bootstrap2<span class="score">得分: 15</span><span class="comment">註: 漏了關閉鈕</span>
+      </h3>
+      <textarea rows="8">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+  你就要錯過這次考試了!
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;立刻申請補考&lt;/button&gt;&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;把我當了吧&lt;/button&gt;
+&lt;/div&gt;  
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>html1<span class="score">得分: 32</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt; 
+ &lt;img src=&quot; http://xinmeti.co/04/img/1.jpg&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>html2<span class="score">得分: 16</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt; 
+ &lt;a href=&quot;http://xinmeti.co/&quot;&gt;新媒體&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>html3<span class="score">得分: 8</span><span class="comment">註: 漏了ul</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;   
+  &lt;li&gt;魯夫&lt;/li&gt;
+  &lt;li&gt;索隆&lt;/li&gt;
+  &lt;li&gt;娜美&lt;/li&gt;
+  &lt;li&gt;喬巴&lt;/li&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>html4<span class="score">得分: 5</span><span class="comment">註: 誤用 h4 做 p, 但題目沒寫得很明確,故不扣分</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;   
+  &lt;h1&gt;視覺化編程 - 該選什麼語言？
+    &lt;hr&gt;
+  &lt;h2&gt;JavaScript — 資料呈現的王者
+  &lt;h4&gt;憑藉著彈性的網頁介面， JavaScript 可說是當前最適合做資訊傳遞的媒介語言了，他所能運行的平台也超乎想像的廣。&lt;br&gt;&lt;br&gt;
+然而，要利用 JavaScript 實作資料視覺化，通常也代表我們必須要一併學習 HTML 、 SVG 甚至 CSS ，有時並不會這麼容易就上手。
+  &lt;h2&gt;R — 資料分析的霸主
+  &lt;h4&gt;以一些更複雜的功能來說， R 本身就有內建像是 Covariance (cov) 、甚至 PCA (Princomp) 的分析，沒有內建的演算法也往往可以在 CRAN Package 中找到，這點 JavaScript 可說是望塵莫及！
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>bootstrap1<span class="score">得分: 32</span>
+      </h3>
+      <textarea rows="8">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;請不要按&lt;/button&gt;&lt;/button&gt;
+  
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>bootstrap4<span class="score">得分: 5</span>
+      </h3>
+      <textarea rows="8">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;card text-center&quot;&gt;
+  &lt;div class=&quot;card-header&quot;&gt;
+   登入新媒體網站
+  &lt;/div&gt;
+   &lt;/div&gt;
+ &lt;form&gt;
+  &lt;form&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;col-form-label&quot; for=&quot;formGroupExampleInput&quot;&gt;使用者帳號&lt;/label&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;formGroupExampleInput&quot; placeholder=&quot;請輸入帳號...&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;col-form-label&quot; for=&quot;formGroupExampleInput2&quot;&gt;密碼&lt;/label&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;formGroupExampleInput2&quot; placeholder=&quot;最短6個字元&quot;&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+  &lt;div class=&quot;form-check&quot;&gt;
+    &lt;label class=&quot;form-check-label&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input&quot;&gt;
+      我願意收到新媒體課程的相關電子報
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;form class=&quot;form-inline&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;註冊&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group mx-sm-3&quot;&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;登入&lt;/button&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+      <h3>bootstrap3<span class="score">得分: 4</span><span class="comment">註: 概念有到，可惜沒完成</span>
+      </h3>
+      <textarea rows="8">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot;&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+ &lt;table class=&quot;table&quot;&gt;
+  &lt;thead class=&quot;thead-dark&quot;&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot; &lt;i class=&quot;fa fa-star-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&quot;&gt;&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    
+  &lt;/thead&gt;   
+  &lt;thead class=&quot;thead-light&quot;&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+      &lt;th scope=&quot; &lt;i class=&quot;fa fa-star-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&quot;&gt;&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+    &lt;thead class=&quot;thead-dark&quot;&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+      &lt;th scope=&quot; &lt;i class=&quot;fa fa-star-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&quot;&gt;&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;   
+  &lt;thead class=&quot;thead-light&quot;&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+      &lt;th scope=&quot; &lt;i class=&quot;fa fa-star-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&quot;&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+   
+   &lt;i class=&quot;fa fa-star-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+ 
+  
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+    </div>
+  </body>
+</html>

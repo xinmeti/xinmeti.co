@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        font-family: arial;
+      }
+      textarea {
+        font-size: 16px;
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px;
+      }
+      h3 {
+        margin: 30px 0 5px;
+        font-family: arial;
+      }
+      .score {
+        color: #f00;
+        font-weight: 200;
+        font-size: 16px;
+        margin-left: 30px;
+      }
+      .comment {
+        margin-left: 100px;
+        font-weight: 200;
+        font-size: 14px;
+        color: #999;
+      }
+      .total {
+        color: #f00;
+        font-size: 32px;
+        float:right;
+      }
+      .total span {
+        color: #999;
+        font-size: 24px;
+      }
+      .total .value {
+        display: inline
+      }
+    </style>
+  </head>
+  <body>
+    <div style="margin:auto;max-width:1024px;width:96%;">
+      <div class="total"><span>總分 / </span> 
+        <div class="value">117</div>
+      </div>
+      <h2>考生姓名: 吳欣晟 / 學號: 405060453</h2>
+      <hr><span>短評: 除了html 部份外都要再加油，至少  bootstrap 要會套喔</span>
+      <h3>css1<span class="score">得分: 31</span><span class="comment">註: 是背景紅不是字紅. 多打了一個</span>
+      </h3>
+      <textarea rows="8">&lt;span&gt;才不是為了你呢&lt;/span&gt;
+ &lt;span style=&quot;color:red;font-size:20px&quot;&gt;才不是為了你呢&lt;/span&gt;</textarea>
+      <h3>css2<span class="score">得分: 12</span><span class="comment">註: css 沒有放在 css selector {} 中</span>
+      </h3>
+      <textarea rows="8">&lt;h1&gt;就少一個插座用，很不方便&lt;/h1&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+&lt;/style&gt;
+  &lt;h1&gt;就少一個插座用，很不方便&lt;/h1&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  font-size:20px;
+  background-color:red;
+  color:white;
+  width:300px;
+  text-align:center;
+  padding:10px 10px 20px 20px  
+  &lt;/style&gt;</textarea>
+      <h3>css3<span class="score">得分: 5</span><span class="comment">註: 未載入函式庫。做錯方向，但會轉所以給部份分數</span>
+      </h3>
+      <textarea rows="8">&lt;link&gt;
+&lt;div&gt;&lt;/div&gt;
+ &lt;style type=&quot;text/css&quot;&gt;
+  div{
+    width:60px;height:60px;background:black;
+    transition: all 1.5s linear;
+  }
+  div:hover{
+        transform: rotate(360deg);
+  }
+  &lt;/style&gt;
+&lt;div&gt;</textarea>
+      <h3>css4<span class="score">得分: 0</span>
+      </h3>
+      <textarea rows="8">&lt;div style=&quot;&quot;&gt;&lt;/div&gt;</textarea>
+      <h3>selector1<span class="score">得分: 0</span>
+      </h3>
+      <textarea rows="8">???? {
+  color: red;
+}
+???? {
+  background: black;
+}</textarea>
+      <h3>selector2<span class="score">得分: 4</span><span class="comment">註: 有寫有給分</span>
+      </h3>
+      <textarea rows="8">&lt;div class=&quot;btn&quot;&gt;發射核彈&lt;/div&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  .btn {
+    background: #249;
+    color: white;
+    padding: 5px 10px;
+  }
+  ????
+&lt;/style&gt;
+
+&lt;div class=&quot;btn&quot;&gt;發射核彈&lt;/div&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+  .btn {
+    background: #249;
+    color: white;
+    padding: 5px 10px;
+  }
+   .mytooltip-container .mytooltip {
+    display:red;
+  }
+  .mytooltip-container:hover .mytooltip, .mytooltip-container:active .mytooltip {
+    display:white;
+  }
+&lt;/style&gt;</textarea>
+      <h3>selector4<span class="score">得分: 0</span>
+      </h3>
+      <textarea rows="8">a.item - 第 ? 行
+.active a.item - 第 ? 行
+#link.dropdown a.item - 第 ? 行
+.item.large - 第 ? 行</textarea>
+      <h3>bootstrap2<span class="score">得分: 0</span>
+      </h3>
+      <textarea rows="8">看到格子這麼大應該就知道有很多字要打了吧！請善用複製貼上</textarea>
+      <h3>html1<span class="score">得分: 32</span>
+      </h3>
+      <textarea rows="8">&lt;img src=&quot; http://xinmeti.co/04/img/1.jpg&quot;&gt;</textarea>
+      <h3>html2<span class="score">得分: 16</span>
+      </h3>
+      <textarea rows="8">&lt;a href=&quot;http://xinmeti.co/&quot;&gt;新媒體&lt;/a&gt;</textarea>
+      <h3>html3<span class="score">得分: 10</span>
+      </h3>
+      <textarea rows="8">&lt;ul&gt;
+  &lt;li&gt;魯夫&lt;/li&gt;
+  &lt;li&gt;索隆&lt;/li&gt;
+  &lt;li&gt;納美&lt;/li&gt;
+  &lt;li&gt;喬巴&lt;/li&gt;
+  &lt;/ul&gt;</textarea>
+      <h3>html4<span class="score">得分: 5</span><span class="comment">註: 完美</span>
+      </h3>
+      <textarea rows="8">&lt;h1&gt;視覺化編程 - 該選什麼語言？&lt;/h1&gt;
+  &lt;h2&gt;JavaScript — 資料呈現的王者&lt;/h2&gt;
+  &lt;p&gt;憑藉著彈性的網頁介面， JavaScript 可說是當前最適合做資訊傳遞的媒介語言了，他所能運行的平台也超乎想像的廣。&lt;/p&gt;
+  
+  &lt;p&gt;然而，要利用 JavaScript 實作資料視覺化，通常也代表我們必須要一併學習 HTML 、 SVG 甚至 CSS ，有時並不會這麼容易就上手。&lt;/p&gt;
+  &lt;h2&gt;R — 資料分析的霸主&lt;/h2&gt;
+  
+&lt;p&gt;以一些更複雜的功能來說， R 本身就有內建像是 Covariance (cov) 、甚至 PCA (Princomp) 的分析，沒有內建的演算法也往往可以在 CRAN Package 中找到，這點 JavaScript 可說是望塵莫及！&lt;/p&gt;</textarea>
+      <h3>bootstrap4<span class="score">得分: 2</span><span class="comment">註: 未載入bootstrap. 用錯模組了</span>
+      </h3>
+      <textarea rows="8">&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;&lt;div class=&quot;card&quot; style=&quot;width: 20rem;&quot;&gt;登入新媒體網站&lt;/h1&gt;
+  &lt;img class=&quot;card-img-top&quot; &gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;h4 class=&quot;card-title&quot;&gt;使用者帳號&lt;/h4&gt;
+    &lt;p class=&quot;card-text&quot;&gt;請輸入帳號&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;ul class=&quot;list-group list-group-flush&quot;&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;密碼&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;最短6個字元&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;我願收到新媒體相關的電子報&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;card-link&quot;&gt;Card link&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;card-link&quot;&gt;Another link&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+    </div>
+  </body>
+</html>

@@ -1,1 +1,1 @@
-window.onload=function(){var e;return e=(new Date).getTime(),Array.from(document.querySelectorAll("table.course-list")).map(function(t){return Array.from(t.querySelectorAll("tr")).map(function(t){var r,n,u;return r=t.querySelector("td:nth-child(2)").innerText,n=new Date((/^01/.exec(r)?"2018/":"2017/")+r).getTime()+864e5,u=n-e,u>0&&6048e5>u?t.setAttribute("class","current"):0>u&&t.setAttribute("class","passed"),u>=6048e5?t.querySelector("a").setAttribute("href","#"):void 0})})};
+undefined

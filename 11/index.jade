@@ -12,8 +12,11 @@ block body
   +nbr(1)
   h3 連結
   ul
-    li: a(href="https://analytics.google.com") Google Analytics
     li: a(href="https://github.com") GitHub
+    li: a(href="https://twitter.com") Twitter
+    li: a(href="https://cards-dev.twitter.com/validator") Twitter Card Validator
+    li: a(href="https://developers.facebook.com/tools/debug/") Facebook Debugger
+    li: a(href="https://analytics.google.com") Google Analytics
     li: a(href="http://www.convinceandconvert.com/content-marketing/content-to-fill-calendar/") Content Types
     li: a(href="https://www.hubspot.com/blog-topic-generator") Topic Generator
 
@@ -42,3 +45,26 @@ block body
     li: a(href="https://stocksnap.io") Stocksnap
     li: a(href="https://thenounproject.com") the Noun Project
     li: a(href="https://loading.io/icon/") Loading Icons
+  +nbr(2)
+  h3 Open Graph 與 Site Meta Tags
+  
+  p 在 &lt;head&gt; 標籤中使用 meta 標籤來建立網站的摘要外觀。
+  h5 Open Graph ( for Facebook )
+  pre.code.
+    &lt;meta property="og:title" content="Hello"&gt;
+    &lt;meta property="og:type" content="article"&gt;
+    &lt;meta property="og:url" content="Hello"&gt;
+    &lt;meta property="og:description" content="an og test"&gt;
+    &lt;meta property="og:title" content="Hello"&gt;
+    &lt;meta property="og:image" content="http:&#47;&#47;xinmeti.co"&gt;  
+  h5 Twitter Card
+  pre.code.
+    &lt;meta name="twitter:card" content="summary_large_image"&gt;
+    &lt;meta name="twitter:site" content="@zbryikt"&gt;
+    &lt;meta name="twitter:domain" content="xinmeti.co"&gt;
+    &lt;meta name="twitter:url" content="http:&#47;&#47;xinmeti.co"&gt;
+    &lt;meta name="twitter:creator" content="@zbryikt"&gt;
+    &lt;meta name="twitter:title" content="Hello World"&gt;
+    &lt;meta name="twitter:description" content="Hi There"&gt;
+    &lt;meta name="twitter:image" content="http:&#47;&#47;xinmeti.co/assets/img/thumbnail.jpg"&gt;
+

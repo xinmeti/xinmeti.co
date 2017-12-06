@@ -1,0 +1,124 @@
+extends /base.jade
+block vars
+  - var config = {jumbotron: false}
+include /mixin.jade
+block bodytop
+  .jumbotron-fluid.text-center
+    .container-fluid
+      +nbr(3)
+      h1 新媒體內容技術與設計 
+      .subtitle New Media Techniques and Design
+      +nbr(2)
+      //-a.btn.btn-primary.rel(style="padding-right:40px",href="/midterm/")
+        span 內容平台競賽 #[img.abs(src="/assets/img/pencil.svg",style="top:-15px")]
+      +nbr(5)
+block body
+  .block
+    h2.inline-block.spc-right 內容平台競賽資訊 #[a#contest.anchor]
+  .sep
+  +nbr(1)
+  p 新媒體課程期末專題分成兩部份 — 「平台」與「專題」。平台部份，預計讓同學分組用 Wordpress 經營內容平台，因此請同學們依組別來決定想切入的內容方向。
+  p 主題可以天馬行空，例如「美食」、「寵物」、「勞基法」，建議依自己的興趣與執行的難易度來決定。各組的平台入口依序為：
+  ul
+    li #[span 第一組:] #[a(href="http://yumyum.xinmeti.co") yumyum.xinmeti.co]
+    li #[span 第二組:] #[a(href="http://culturesharing.xinmeti.co") yumyum.xinmeti.co]
+    li #[span 第三組:] #[a(href="http://foodie.xinmeti.co") foodie.xinmeti.co]
+    li #[span 第四組:] #[a(href="http://pckttt.xinmeti.co") pckttt.xinmeti.co]
+    li #[span 第五組:] #[a(href="http://hello.xinmeti.co") hello.xinmeti.co]
+    li #[span 第六組:] #[a(href="http://bazaar.xinmeti.co") bazaar.xinmeti.co]
+    li #[span 第七組:] #[a(href="http://lucky7.xinmeti.co") lucky7.xinmeti.co]
+  +nbr(2)
+  h3 最低要求
+  ul
+    li 完成基本市場調查報告
+    li 完成經營策略報告
+    li 網站基本設定完成，包含站名、追蹤碼、廣告等
+    li 各組員各自完成一頁自我簡介
+    li
+      span 各組員至少有一篇文章做為主要作者，文章需滿足：
+      ul
+        li 妥善文章外觀與可讀的內容
+        li 至少含有一張圖片
+        li 妥善的 Facebook 與 Twitter 預覽結果
+        li 文章字數 500 字以上
+        li 期末評分前瀏覽量達 100 以上。
+
+  +nbr(2)
+  h3 評分方式
+  p 競賽成績分別以個人及分組成績加權計算，並有額外加分機會。成績中各個項目的計分方式如下：
+  ul
+    li 基本要求 - 做到即得分
+    li
+      span 進階評比 - 各組依各項指標為項目排名，並依排名計分。
+      ul
+        li 第一、二名：5 分
+        li 第三～五名：4 分
+        li 第六、七名：3 分
+    li 
+      span 額外追加 ( Bonus ) - 特別項目前三名者於總分上額外追加分數。
+      ul
+        li 第一名：3 分
+        li 第二名：2 分
+        li 第三名：1 分
+    li 總評比計分方式：依進階評比各項名次總和決定勝負。
+    li
+      span 總分計算方式： ( 超過 100 分則以 100 計 )
+      blockquote: big
+        br
+        big: pre.
+          總分 =
+            ( 分組得分 * 0.4 ) +
+            ( 個人得分 * 0.6 ) +
+            分組總評比額外追加 +
+            個人總評比額外追加 +
+            營收排名額外追加
+  +nbr(1)
+  h4 分組評分細節
+  ul
+    li
+      span 基本要求 ( #[b.red 70分] )，其中：
+      ul
+        li #[b.red 8分] / 基本市場分析報告 ( 第 10 次上課課後作業 )
+        li #[b.red 8分] / 基本規劃報告 ( 第 11 次上課練習 )
+        li #[b.red 20分] / 分組中，每個人至少須有一篇文章為主要作者。
+        li
+          span #[b.red 18分] / 妥善設定下列平台並開放讀取權限給老師：
+          ul
+            li #[b.red 6分] / Google Analytics
+            li #[b.red 6分] / Google Adsense
+            li #[b.red 6分] / Google Search Console
+        li #[b.red 16分] / 妥善設定網站的基本資訊
+    li
+      span 進階評比 ( #[b.red 30分] )，其中：
+      ul
+        li #[b.red 5分] / 整體 Google Adsense 表現 ( 經營冠軍 )
+        li #[b.red 5分] / 網站平均搜尋排名
+        li
+          span #[b.red 20分] / 指定的六篇文章的：
+          ul
+            li #[b.red 5分] / 瀏覽量(總和)
+            li #[b.red 5分] / 停留時間(時間 x 各別瀏覽量/總瀏覽量)
+            li #[b.red 5分] / 跳出率(中位數)
+            li #[b.red 5分] / 臉書按讚數(總和)
+  br
+  h4 個人評分細節
+  p 以個人指定的一篇文章做為評量用的專文。
+  ul
+    li
+      span 基本要求 ( #[b.red 80分] )，其中：
+      ul 
+        li #[b.red 5分] / 建立自介頁面，字數不限。
+        li #[b.red 35分] / 專文字數 500 以上，至少含有一張圖，可讀的內容與適當的外觀。
+        li #[b.red 20分] / 專文瀏覽量 100 人次以上。
+        li
+          span #[b.red 20分] / 社群預覽良好，有縮圖，妥善的標題與摘要。其中：
+          ul
+            li #[b.red 10分] / 通過 Facebook Debug 確認
+            li #[b.red 10分] / 通過 Twitter Validator 確認
+    li
+      span 進階評比 ( #[b.red 20分] )，其中：
+      ul
+        li #[b.red 5分] / 瀏覽量
+        li #[b.red 5分] / 停留時間
+        li #[b.red 5分] / 跳出率
+        li #[b.red 5分] / 臉書按讚數

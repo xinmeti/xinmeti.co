@@ -1,0 +1,58 @@
+extends /base.jade
+include /mixin.jade
+block head
+  script(src="/lib/jquery.magnific-popup.min.js")
+  link(rel="stylesheet" type="text/css" href="/lib/magnific-popup.css")
+  link(rel="stylesheet" type="text/css" href="/lib/transition.css")
+block body
+  .grayed 2017-12-14
+  big 內容工程
+  h1 版本管理概念與使用 Github 架站
+  .sep
+  +nbr(1)
+  h3 連結
+  ul
+    li: a(href="https://analytics.google.com/") Google Analytics
+    li: a(href="https://www.google.com/webmasters/#?modal_active=none") Google Search Console
+    li: a(href="https://github.com") GitHub
+    li: a(href="https://developers.facebook.com/docs/plugins/comments/") Facebook comment plugin
+    li: a(href="maps.google.com.tw") Google Maps
+    li: a(href="https://startbootstrap.com") Start Bootstrap - Bootstrap Templates
+  +nbr(1)
+  .sep
+  +nbr(1)
+  h3 Wordpress 套件安裝
+
+  h4 GA Google Analytics
+  p 進入 Wordpress 後台後, 點選「plugins」選單，選擇「Add New」，接著
+  ul
+    li 搜尋「google analytics」
+    li 找到「GA Google Analytics」，點擊「install now」
+    li 待按鈕變成「activate」後，再次點擊
+    li 回到「plugins」選單中，點擊「installed plugins」
+    li 找到「GA Google Analytics」
+    li 點擊「settings」→「plugin settings」
+    li 更新「GA Property ID」
+    li 點選 Enable Analytics
+    li Save Settings 
+
+  h4 Yoast SEO
+  p 進入 Wordpress 後台後, 點選「plugins」選單，選擇「Add New」，接著
+  ul
+    li 搜尋「Yoast SEO」
+    li 找到「Yoast SEO」，點擊「install now」
+    li 待按鈕變成「activate」後，再次點擊
+    li 之後在編輯貼文時，可在右下角找到「feature image」
+    li 編輯介面的最底下則提供臉書標題、描述的編輯器。
+
+  h4 Google Search Console
+  p 連至 #[a(href="https://www.google.com/webmasters/#?modal_active=none") Google Search Console]，然後：
+  ul
+    li 登入
+    li 點擊「新增內容」
+    li 輸入自己的網域，按新增
+    li 選擇「其它方法」中的「Google Analytics 分析」，並點「驗證」後「繼續」
+    li 加入其它使用者：「設定」→「使用者與資源擁有者」→「新增使用者」
+
+  h4 接受 Google Search
+  p 在「settings」選單中找到 reading → Search Engine Visibility → uncheck

@@ -1,0 +1,42 @@
+h3 使用 NodeJS 
+p 透過 NodeJS 環境，我們可以在網頁更新或上傳前預先處理其內容。
+h4 安裝
+p 安裝的步驟如下：
+ul
+  li 連至 #[a(href="https://nodejs.org/en/download/",target="_blank") Nodejs 下載頁面], 選取適合的安裝檔 ( Windows Installer (.msi) 通常即可 )
+  li 執行 / 解壓縮該下載檔後依指示進行
+br
+h4 執行
+ul
+  li 於開始功能表搜尋框中鍵入「cmd」搜尋命令提示字元程式，點選執行「命令提示字元」
+  li
+    span 測試 nodejs 的安裝狀態：
+    ul
+      li 試著鍵入「node」，接著換行鍵
+      li 鍵入「console.log("hello world");」，接著換行鍵
+br
+h4 使用命令提示字元
+p 「命令提示字元」為一個終端機模式的指令操作介面。為了透過指令取用電腦中的檔案內容，「命令提示字元」中有個很重要的概念「工作路徑」，通常會出現在程式最左下方以文字的方式提示。
+p 切換工作路徑的方式很簡單，使用「cd」指令，並搭配目標路徑，例如：
+pre.code.
+  cd c:\windows\system32
+br
+h4 安裝模組
+p NodeJS 社群提供了大量的程式模組供我們使用，不需要重新自造輪子。安裝模組需透過 NPM ( Node Package Manager )，我們先嘗試安裝「Jade」網頁樣板語言處理模組：
+ul
+  li 於命令提示字元鍵入「npm install -g jade」
+h4 測試 jade
+p 透過記事本「notepad」，於命令提示字元的當前目錄新增一個檔案「index.jade」
+ul
+  li 執行記事本「notepad」程式 ( 可透過開始功能表尋找 )
+  li
+    span 鍵入以下內容：
+    pre.code.
+      doctype html
+      html
+        head
+        body
+          h1 hello world!
+  li 於命令提示字元，執行「jade -P index.jade」
+    
+

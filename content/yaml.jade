@@ -1,0 +1,65 @@
+h3 使用 Yaml
+p 編輯 Jade / Pug 時，內容若有大量資料，往往不方便維護。我們可以透過帶入「物件」的方式來將資料分離；然而，Jade 透過 JSON 這種格式來儲存資料，而 JSON 格式較為繁複，不易編輯，如下即為一例：
+blockquote
+  pre.code.
+    {
+      "name": "Johnny",
+      "age": 20,
+      "address": {
+        "city": "Taipei",
+        "village": "Daan"
+      }
+    }
+p 這時我們可以使用「Yaml」格式，再透過 NodeJS 轉檔為 JSON 。
+
++nbr(1)
+h4 安裝 Yaml 模組
+p 使用 NPM 於命令提示字元執行以下指令安裝：
+pre.code.
+  npm install -g js-yaml
++nbr(1)
+h4 執行方式
+ul
+  li
+    span 先準備一個檔案，命名為「index.yaml」，內容如下：
+    pre.code.
+      hello: 1
+  li
+    span 於命令提示字元執行以下指令作轉換：
+    pre.code.
+      js-yaml index.yaml > index.json
+  li
+    span 準備一個新的 jade 檔，命名為「yaml-test.jade」，內容如下：
+    pre.code.
+      doctype html
+      html
+        head
+        body
+          span &#35;{hello}
+  li
+    span 執行「jade」時帶入額外參數以指定變數檔：
+    pre.code.
+      jade -P index.jade --obj index.json
++nbr(1)
+h4 Yaml 語法
+p 最簡單的用法即是「名稱: 數值」的表列，例如：
+pre.code.
+  name: Johnny
+  age: 20
+  gender: boy
+p 透過縮排可以表現階層性的概念：
+pre.code.
+  name: Johnny
+  age: 20
+  address:
+    city: Taipei
+    village: Daan
+    no: 15
+p 長段落文字則搭配「|」(pipe) 與縮排來實現：
+pre.code.
+  name: Johnny
+  age: 20
+  brief: |
+    Hi Guys! I'm Johnny, J-o-h-n-n-y.
+
+    I'm pretty busy with this stuff, so bye bye.

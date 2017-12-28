@@ -1,0 +1,72 @@
+extends /base.jade
+include /mixin.jade
+block head
+  script(src="/lib/jquery.magnific-popup.min.js")
+  link(rel="stylesheet" type="text/css" href="/lib/magnific-popup.css")
+  link(rel="stylesheet" type="text/css" href="/lib/transition.css")
+block body
+  .grayed 2017-12-28
+  big 內容工程
+  h1 樣板語言與前處理器 / Pug, Stylus and Yaml
+  .sep
+  +nbr(1)
+  h3 連結
+  ul
+    li: a(href="https://github.com/g0v/jothon-net/") 揪松網
+    li: a(href="http://jade-lang.com/") Jade 文件
+    li: a(href="http://www.yaml.org/spec/1.2/spec.html") Yaml 語法標準
+    li: a(href="http://stylus-lang.com/") Stylus 官網
+  +nbr(1)
+  h3 簡介
+  p 當代網頁開發已經很少人直接寫 HTML / CSS / JavaScript 了，大多會經過預處理或是樣板化。整組網頁製作或網站開發已脫離不了本機端的開發程式與模組使用，包含資源的最佳化、開發用語言使用、偵錯等功能都可以大大提升開發與協作的效率。
+  p 本次課程從建立本機端開發環境開始，帶大家學習 Jade 與 Yaml 搭配使用的初步，以了解數位內容產置流程中的一環，透過親手實作的方式建立整體流程的基本概念概念為主，未來不一定需要精通或是熟悉相關工具。
+  +nbr(2)
+  include ../content/nodejs.jade
+  +nbr(1)
+  .sep
+  +nbr(1)
+  include ../content/jade.jade
+  +nbr(1)
+  .sep
+  +nbr(1)
+  include ../content/yaml.jade
+  +nbr(1)
+  .sep
+  +nbr(1)
+  include ../content/jade-var.jade
+  +nbr(1)
+  .sep
+  +nbr(1)
+  h3 使用快速開發套件
+  p 線上有許多預先準備好的開發模板，透過執行常駐程式的方式自動編譯，並提供額外的樣板指令。我們使用 #[a(href="https://github.com/zbryikt/template") 這個樣板] 來做簡單的練習。
+  ul
+    li 下載 #[a(href="https://github.com/zbryikt/template/archive/master.zip") zbryikt/template] 套件
+    li 解壓縮至特定資料夾
+    li 於命令提示字元，利用「cd」指令切換至上一步驟中的資料夾
+    li 執行「npm install」安裝必要套件
+    li 執行「node_modules/.bin/LiveScript server」啟動程式
+    li
+      | 打開資料夾中的「index.jade」，於「body」下嘗試加入 h1 標題，例如：
+      pre.code.
+        h1 Hello World!
+    li
+      | 連線至本機開發用網站「
+      a(href="http://localhost:9999") http://localhost:9999
+      | 」，你應該會看到大大的「Hello World」
+  +nbr(2)
+  .sep
+  +nbr(2)
+  h3 案例參考
+  p 零時政府揪松網即利用 jade / yaml / stylus 建置。例如，揪松網時間軸元件：
+  ul
+    li
+      | Yaml 檔：
+      a(href="https://github.com/g0v/jothon-net/blob/master/data/timeline.yaml") https://github.com/g0v/jothon-net/blob/master/data/timeline.yaml
+    li
+      | Jade 檔：
+      a(href="https://github.com/g0v/jothon-net/blob/master/src/jade/timeline.jade") https://github.com/g0v/jothon-net/blob/master/src/jade/timeline.jade
+    li
+      | Stylus 檔：
+      a(href="https://github.com/g0v/jothon-net/blob/master/src/styl/timeline.styl") https://github.com/g0v/jothon-net/blob/master/src/styl/timeline.styl
+  p 可直接參考 #[a(href="g0v.github.io/jothon-net/") 揪松網開發頁面] 看看產出結果。
+  p 此外，線上網頁實驗服務如 #[a(href="http://jsbin.com/") JSBin] 很多都有提供 Jade / Stylus 即時轉譯功能，亦可以使用其功能做練習。

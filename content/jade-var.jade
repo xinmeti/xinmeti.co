@@ -1,0 +1,55 @@
+h3 Jade / Pug 變數與使用 Yaml 迭代
+p Yaml 段落中使用到特殊的 Jade 語法「&#35;{name}」，這種用法可以將該語法整個代換成對應的資料內容。有時會搭配 Jade 內 JSON 物件使用，例如：
+pre.code.
+  - var name = "Johnny";
+  h1 Hello &#35;{name}
+p 有時候我們會有很多筆資料，若要逐一手打也是相當辛苦。這時可使用 JSON 中的「陣列」語法，搭配 Jade 的「迭代」語法使用。而 JSON 自己寫比較麻煩，我們仍可透過 Yaml 做轉換； Yaml 的陣列寫法很簡單，在資料前加上「-」(dash) 即可，例如下例表現出圓周率的前五位數字：
+pre.code.
+  pie:
+    - 3
+    - 1
+    - 4
+    - 1
+    - 5
+p 若在陣列中每個元素裡都想表現更複雜的資料，可以再進一步把 Yaml 語法延伸進去：
+pre.code.
+  members:
+    - name: Johnny
+      age: 20
+    - name: Cindy
+      age: 17
+    - name: Angela
+      age: 16
+    - name: David
+      age: 26
+p 於 Jade / Pug 中，若要取用陣列資料中的特定元素，可使用「變數名[編號 - 1]」的語法。例如下例可取得上例中的第二位成員 Cindy：
+pre.code.
+  members[1]
+p 要進一步取得成員中的詳細資訊，使用「.」(dot) 接著資訊的名稱。例如，下例取得第二位成員 Cindy 的年齡：
+pre.code.
+  members[1].age
+p 最後，我們可以透過 Jade 迭代所有成員，只要使用「each」語法即可：
+pre.code.
+  each member in members
+    h1 成員 &#35;{member.name}: &#35;{member.age}歲
+p 上例中的 each 會幫我們把 each 下縮排的內容依照其中指定的「members」陣列元素數量自動重覆，並把各個元素的資訊迭代到「member」變數之中。 members 與 member 這兩個字我們可以依自己需求選用不同的名字。
++nbr(1)
+h3 實作練習
+p 請搜集前後左右共四位以上同學的姓名、身高、性別、血型、星座，建立 Yaml 檔，並利用 Jade 迭代功能製成網頁。
+p 參考用 Yaml：
+pre.code.
+  - name: 王小明
+    gender: 男
+    blood: O
+    horoscope: 獅子
+    height: 168
+  - name: 張大寶
+    gender: 女
+    bolld: A
+    horoscope: 蛇夫
+    height: 159
+p 參考指令：
+pre.code.
+  js-yaml classmate.yaml > classmate.json
+  jade -P classmate.jade --obj classmate.json
+

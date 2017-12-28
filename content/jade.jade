@@ -1,0 +1,80 @@
+h3 使用 Jade / Pug
+p Jade 為前端網頁樣板語言，可透過前處理器轉換為 html，並包含以下優點：
+ul
+  li 可參數化
+  li 可樣板化
+  li 網頁模組化
+  li 可程序化
+h4 基本用法
+ul
+  li
+    p 所有的標籤直接用標籤名稱取代，例如：
+    pre.code.
+      &lt;h1&gt; → h1
+  li
+    p 標籤內的屬性則置於名稱後方的括號內，以逗號分隔，例如：
+    pre.code.
+      &lt;h1 style="width:100px" class="active"&gt; → h1(style="width:100px",class="active")
+  li
+    p 類別與 ID 可進一步以 CSS Selector 語法改寫並置於名稱與括號間，例如：
+    pre.code.
+      &lt;h1 style="width:100px" class="active" id="title"&gt; → h1#title.active(style="width:100px")
+  li
+    p 標籤內容直接放在標籤後方，中間空一格即可：
+    pre.code.
+      &lt;h1 style="width:100px" class="active" id="title"&gt; Hello &lt;/h1&gt;
+    | 變成：
+    pre.code.
+      h1#title.active(style="width:100px") hello
+  li
+    p 槽狀標籤以縮排來安置。例如：
+    pre.code.
+      &lt;h1 style="width:100px" class="active" id="title"&gt;
+        &lt;span&gt; Hello &lt;/span&gt;
+      &lt;/h1&gt;
+    p 變成：
+    pre.code.
+      h1#title.active(style="width:100px")
+        span hello
+  li
+    p 若想直接打文字而不想將文字包含在標籤中，在前面加上「|」( pipe 符號 ) 即可：
+    pre.code.
+      Hello World!
+    p 變成：
+    pre.code.
+      | Hello World!
+  li
+    p 使用特殊標籤而需要大量純文字時 ( 例如 style 標籤 )，可在標籤名後方加上「.」以省略「|」：
+    pre.code.
+      &lt;style type="text/css&gt;
+        body { background: red; }
+      &lt;/style&gt;
+    p 變成：
+    pre.code.
+      style(type="text/css").
+        body { background: red; }
+  li
+    p 使用「include」語法引入外部檔案。練習：
+    ul
+      li
+        p 建立一個檔案命名為「title.jade」，內容僅包含：
+        pre.code.
+          h1 Hello World!
+      li
+        p 另外建立一個檔案「content.jade」，包含下列內容：
+        pre.code.
+          p 測試用的段落
+      li
+        p 接著建立「index.jade」，包含以下內容：
+        pre.code.
+          doctype html
+          html
+            head
+            body
+              include title.jade
+              include content.jade
+      li
+        p 使用命令提示字元在當前目錄執行：
+        pre.code.
+          jade -P index.jade
+      li 開啟產生的 index.html 檔以檢視結果。

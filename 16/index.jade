@@ -7,15 +7,93 @@ block head
 block body
   .grayed 2017-12-28
   big 網站外包
-  h1 使用網路服務 / Google Maps, FB 讚按鈕等
+  h1 使用網路服務 Google Maps, 臉書社交外掛等服務
   .sep
   +nbr(1)
   h3 連結
   ul
+    li: a(href="https://youtube.com") Youtube
     li: a(href="https://www.google.com.tw/maps") Google Maps
     li: a(href="https://developers.facebook.com/docs/plugins/like-button") Facebook Like Button
     li: a(href="https://developers.facebook.com/docs/plugins/comments/") Facebook Comment Widget
     li: a(href="https://twitter.com/settings/widgets/new/search") Faceook Hashtag Timeline Embed 
     li: a(href="https://carto.com/") Carto
     li: a(href="https://plotdb.com") PlotDB
+    li: a(href="https://slides.com") Slides.com
   +nbr(1)
+  h3 嵌入內容長寬比 
+  p 使用 iframe 可輕鬆置入外部網站的互動資源，但有時尺寸是個很令人頭大的問題。有些網站會提供「固定長寬比」的功能，但基本上原理並不複雜，只要理解基本概念，自己也可以實作長寬比固定的 iframe 嵌入。
+  p 在 CSS 中，padding 可以用來保留區塊內框的留白。如同 width 或 height 屬性， padding 亦可以使用百分比來設定其大小，這時這個百分比其實是相對於該元素的「寬度」。比方說，
+  pre.code.
+    padding-bottom: 50%
+  p 代表 padding-bottom 的大小為寬度的一半。
+  p 因此，我們可以利用這個特性，將區塊的高度設定為 0 ，再利用 padding-bottom 來保持整體區塊的寬高比：
+  .row
+    .col
+      pre.code.
+        &lt;div style="width:300px;border:1px solid #999"&gt;
+          &lt;div style="height:0;padding-bottom:50%"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+    .col
+      div(style="width:300px;border:1px solid #999;margin:auto")
+        div(style="height:0;padding-bottom:50%")
+  +nbr(2)
+  p 上例描繪出一個寬高比為 2:1 的矩形。你可以自由的調整 width 的值來實驗其效果。接著，為了讓 iframe 貼合這個矩形的大小，我們讓他相對於最外層元素來進行絕對定址：
+  .row
+    .col
+      pre.code.
+        &lt;div style="width:300px;border:1px solid #999;#[b.red position:relative]"&gt;
+          &lt;div style="height:0;padding-bottom:50%"&gt;
+            &lt;iframe src="https:&#47;&#47;www.google.com/maps/embed?pb=!1m14!1m12...."
+            #[b.red width="100%" height="100%"] frameborder="0"
+            style="border:0;#[b.red position:absolute]" allowfullscreen&gt;&lt;/iframe&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+    .col
+      br
+      div(style="width:300px;border:1px solid #999;position:relative;margin:auto")
+        div(style="height:0;padding-bottom:50%")
+          iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3747121.81958051!2d120.0843006!3d23.485750050000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2stw!4v1514971295656",width="100%",height="100%",frameborder="0",style="border:0;position:absolute",allowfullscreen)
+  br
+  p 最後，考慮到響應式的效果，將最外層的寬度使用百分比來設定，或搭配 Bootstrap 的 row 等相關屬性來使用。上例程式碼直接將寬度設為 100% 後即得到下例：
+  div(style="width:100%;border:1px solid #999;position:relative;margin:auto")
+    div(style="height:0;padding-bottom:50%")
+      iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3747121.81958051!2d120.0843006!3d23.485750050000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2stw!4v1514971295656",width="100%",height="100%",frameborder="0",style="border:0;position:absolute",allowfullscreen)
+  +nbr(2)
+  h3 Media Query
+  p 並非所有時候保留長寬比都是最好的做法。比方說，原本在桌機上適合 landscape (橫向) 形式的地圖，也許在手機上更適合以 portrait (直向) 方式呈現。依照不同媒介來設定不同 CSS 的方式一般稱之為響應適設計，可以透過 CSS 中的 Media Query 來達成。下面為一個 Media Query 的範例：
+  pre.code.
+    @media (max-width: 480px) {
+      body {
+        font-size: 24px;
+      }
+    }
+
+  p 上例會在螢幕寬度不到 480px 時將網頁字體大小設定成 24px 大。搭配 iframe 使用，我們可以在螢幕寬度不到 480px，將 iframe 佔滿整個畫面：
+  pre.code.
+    &lt;style type="text/css"&gt;
+      @media (max-width: 480px) {
+        .container {
+          height: 100%
+        }
+        .container div {
+          padding-bottom: 0!important;
+          height: 100%!important;
+        }
+      }
+    &lt;/style&gt;
+    &lt;div #[b.red class="container"] style="width:300px;border:1px solid #999;position:relative"&gt;
+      &lt;div style="height:0;padding-bottom:50%"&gt;
+        &lt;iframe src="https:&#47;&#47;www.google.com/maps/embed?pb=!1m14!1m12...."
+        width="100%" height="100%" frameborder="0"
+        style="border:0;position:absolute" allowfullscreen&gt;&lt;/iframe&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  p 要注意的一點是，若這段碼要有效，區塊的所有上層元素 ( 包含 html, body ) 都需要 height: 100% 這樣的 CSS 樣式設定。
+  +nbr(2)
+  h3 參考嵌入
+  p 嵌入內含 PlotDB 嵌入的 Slides.com
+  div(style="width:100%")
+    div(style="position:relative;height:0;padding-bottom:73%")
+      iframe(src="//slides.com/tkirby/data-visualization-20/embed" style="position:absolute" width="100%" height="100%" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)

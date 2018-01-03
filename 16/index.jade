@@ -1,0 +1,21 @@
+extends /base.jade
+include /mixin.jade
+block head
+  script(src="/lib/jquery.magnific-popup.min.js")
+  link(rel="stylesheet" type="text/css" href="/lib/magnific-popup.css")
+  link(rel="stylesheet" type="text/css" href="/lib/transition.css")
+block body
+  .grayed 2017-12-28
+  big 網站外包
+  h1 使用網路服務 / Google Maps, FB 讚按鈕等
+  .sep
+  +nbr(1)
+  h3 連結
+  ul
+    li: a(href="https://www.google.com.tw/maps") Google Maps
+    li: a(href="https://developers.facebook.com/docs/plugins/like-button") Facebook Like Button
+    li: a(href="https://developers.facebook.com/docs/plugins/comments/") Facebook Comment Widget
+    li: a(href="https://twitter.com/settings/widgets/new/search") Faceook Hashtag Timeline Embed 
+    li: a(href="https://carto.com/") Carto
+    li: a(href="https://plotdb.com") PlotDB
+  +nbr(1)

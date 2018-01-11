@@ -19,14 +19,39 @@ block body
   +nbr(1)
   p 新媒體課程期末專題分成兩部份 — 「平台」與「專題」。平台部份，預計讓同學分組用 Wordpress 經營內容平台，因此請同學們依組別來決定想切入的內容方向。
   p 主題可以天馬行空，例如「美食」、「寵物」、「勞基法」，建議依自己的興趣與執行的難易度來決定。各組的平台入口依序為：
-  ul
-    li #[span 第一組:] #[a(href="http://yumyum.xinmeti.co") yumyum.xinmeti.co]
-    li #[span 第二組:] #[a(href="http://culturesharing.xinmeti.co") culturesharing.xinmeti.co]
-    li #[span 第三組:] #[a(href="http://foodie.xinmeti.co") foodie.xinmeti.co]
-    li #[span 第四組:] #[a(href="http://pckttt.xinmeti.co") pckttt.xinmeti.co]
-    li #[span 第五組:] #[a(href="http://hello.xinmeti.co") hello.xinmeti.co]
-    li #[span 第六組:] #[a(href="http://bazaar.xinmeti.co") bazaar.xinmeti.co]
-    li #[span 第七組:] #[a(href="http://lucky7.xinmeti.co") lucky7.xinmeti.co]
+
+  mixin teaminfo(id, name, idx, desc)
+    a.team.card.bg-light(href="http://" + id + ".xinmeti.co/")
+      .img.card-img-top(style="background-image:url(/assets/img/wp/" + id + ".jpg)")
+      .card-body
+        h4.mb-0 #{name}
+        small.grayed 第 #{idx} 組
+        .desc #{desc}
+
+  .team-list
+    +teaminfo("yumyum", "超商實驗室", 1, "美食、新品報你知")
+    +teaminfo("culturesharing", "文化大聲公", 2, "來到歹丸，吃貨緊來，亞洲大比拼")
+    +teaminfo("foodie", "銅板美食大集合!!", 3, "甜食篇、飲料篇、夜市小吃篇")
+    +teaminfo("pckttt", "主打語言攻擊的惡劣網站", 4, "請盡量在這個網站裡搜尋知識，雖然這不可能。")
+    +teaminfo("hello", "恐怖實驗室", 5, "等你來敲門")
+    +teaminfo("bazaar", "遊市集", 6, "一起在各種稀奇古怪的東西中，尋找自己的小確幸吧！")
+    +teaminfo("lucky7", "兩岸日常文化差異", 7, "這些詞語，你聽到過嗎？")
+    .team.max
+    //-.team.card.bg-light
+      .img.card-img-top(style="background-image:url(/assets/img/wp/yumyum.jpg)")
+      .card-body
+        h4 超商食驗室 #[small.grayed  / 第一組]
+        .desc 美食、新品報你知
+  //-
+    ul
+      li #[span 第一組:] #[a(href="http://yumyum.xinmeti.co") yumyum.xinmeti.co]
+      li #[span 第二組:] #[a(href="http://culturesharing.xinmeti.co") culturesharing.xinmeti.co]
+      li #[span 第三組:] #[a(href="http://foodie.xinmeti.co") foodie.xinmeti.co]
+      li #[span 第四組:] #[a(href="http://pckttt.xinmeti.co") pckttt.xinmeti.co]
+      li #[span 第五組:] #[a(href="http://hello.xinmeti.co") hello.xinmeti.co]
+      li #[span 第六組:] #[a(href="http://bazaar.xinmeti.co") bazaar.xinmeti.co]
+      li #[span 第七組:] #[a(href="http://lucky7.xinmeti.co") lucky7.xinmeti.co]
+
   +nbr(2)
   h3 最低要求
   ul

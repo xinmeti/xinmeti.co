@@ -1,4 +1,4 @@
-require! <[chokidar http fs path jade stylus markdown]>
+require! <[chokidar http fs path jade stylus markdown js-yaml]>
 require! 'uglify-js': uglify, LiveScript: lsc
 
 useMarkdown = true
@@ -18,6 +18,21 @@ _log = console.log
 console.log = (...arg) -> _log.apply null, [now!] ++ arg
 ignore-list = [/^server.ls$/, /^library.jade$/, /^\.[^/]+/, /^node_modules\//,/^assets\//]
 ignore-func = (f) -> if f => ignore-list.filter(-> it.exec f.replace(cwd-re, "")replace(/^\.\/+/, ""))length else 0
+
+
+jade-extapi = do
+  md: -> markdown.toHTML it
+  yaml: -> js-yaml.safe-load fs.read-file-sync it
+  yamls: (dir) ->
+    ret = fs.readdir-sync dir
+      .map -> "#dir/#it"
+      .filter -> /\.yaml$/.exec(it)
+      .map ->
+        try
+          js-yaml.safe-load(fs.read-file-sync it)
+        catch e
+          console.log "[ERROR@#it]: ", e
+    return ret
 
 type-table =
   "3gp":"video/3gpp",

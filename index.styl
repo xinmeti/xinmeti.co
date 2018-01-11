@@ -109,3 +109,26 @@ table.spec
     padding: 5px 10px
   tr:nth-child(2n) td
     background: #eee
+
+.team-list
+  display: flex
+  flex-wrap(wrap)
+  .team
+    flex(1 1 300px)
+    width: 300px
+    margin: 5px
+    text-align: center
+  .team.max
+    flex(1 1 640px)
+  .info
+    margin-top: 5px
+  h4, .desc, .team
+    text-decoration: none
+    color: #222
+
+  .img
+    height: 170px
+    background-color: #eee
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center

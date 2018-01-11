@@ -634,3 +634,35 @@ table.spec tr td {
 table.spec tr:nth-child(2n) td {
   background: #eee;
 }
+.team-list {
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.team-list .team {
+  -webkit-flex: 1 1 300px;
+  flex: 1 1 300px;
+  width: 300px;
+  margin: 5px;
+  text-align: center;
+}
+.team-list .team.max {
+  -webkit-flex: 1 1 640px;
+  flex: 1 1 640px;
+}
+.team-list .info {
+  margin-top: 5px;
+}
+.team-list h4,
+.team-list .desc,
+.team-list .team {
+  text-decoration: none;
+  color: #222;
+}
+.team-list .img {
+  height: 170px;
+  background-color: #eee;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

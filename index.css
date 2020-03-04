@@ -330,7 +330,7 @@ h6.tag {
   color: #fff;
   padding: 5px 10px;
   text-align: center;
-  z-index: -1;
+  z-index: ;
   font-size: 13px;
 }
 .hover-tip a {
